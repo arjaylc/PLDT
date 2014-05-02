@@ -125,7 +125,8 @@
 				border: solid 1px transparent;
 				margin: 6px 0;
 			}
-		</style>		
+		</style>	
+
 	</head>
   
 	<body id="login">
@@ -140,7 +141,7 @@
 				<?php
 				if(isset($_GET['error'])&&$_GET['error']=='login'){
 				?>
-					<span class="form-error"> Invalid username or password. Please reenter.</span>
+					<span class="alert alert-danger"> Invalid ID number or password</span>
 				<?php	
 				}
 				if(isset($_GET['password'])&&$_GET['password']=='updated'){?>
