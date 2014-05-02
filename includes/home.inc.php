@@ -73,136 +73,117 @@
           <div class="tab-content">
             <div class="tab-pane fade in active" id="home">
               <h1>Dashboard</h1>
-              <div class="table-responsive">
-            <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>Header</th>
-                  <th>Header</th>
-                  <th>Header</th>
-                  <th>Header</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1,001</td>
-                  <td>Lorem</td>
-                  <td>ipsum</td>
-                  <td>dolor</td>
-                  <td>sit</td>
-                </tr>
-                <tr>
-                  <td>1,002</td>
-                  <td>amet</td>
-                  <td>consectetur</td>
-                  <td>adipiscing</td>
-                  <td>elit</td>
-                </tr>
-                <tr>
-                  <td>1,003</td>
-                  <td>Integer</td>
-                  <td>nec</td>
-                  <td>odio</td>
-                  <td>Praesent</td>
-                </tr>
-                <tr>
-                  <td>1,003</td>
-                  <td>libero</td>
-                  <td>Sed</td>
-                  <td>cursus</td>
-                  <td>ante</td>
-                </tr>
-                <tr>
-                  <td>1,004</td>
-                  <td>dapibus</td>
-                  <td>diam</td>
-                  <td>Sed</td>
-                  <td>nisi</td>
-                </tr>
-                <tr>
-                  <td>1,005</td>
-                  <td>Nulla</td>
-                  <td>quis</td>
-                  <td>sem</td>
-                  <td>at</td>
-                </tr>
-                <tr>
-                  <td>1,006</td>
-                  <td>nibh</td>
-                  <td>elementum</td>
-                  <td>imperdiet</td>
-                  <td>Duis</td>
-                </tr>
-                <tr>
-                  <td>1,007</td>
-                  <td>sagittis</td>
-                  <td>ipsum</td>
-                  <td>Praesent</td>
-                  <td>mauris</td>
-                </tr>
-                <tr>
-                  <td>1,008</td>
-                  <td>Fusce</td>
-                  <td>nec</td>
-                  <td>tellus</td>
-                  <td>sed</td>
-                </tr>
-                <tr>
-                  <td>1,009</td>
-                  <td>augue</td>
-                  <td>semper</td>
-                  <td>porta</td>
-                  <td>Mauris</td>
-                </tr>
-                <tr>
-                  <td>1,010</td>
-                  <td>massa</td>
-                  <td>Vestibulum</td>
-                  <td>lacinia</td>
-                  <td>arcu</td>
-                </tr>
-                <tr>
-                  <td>1,011</td>
-                  <td>eget</td>
-                  <td>nulla</td>
-                  <td>Class</td>
-                  <td>aptent</td>
-                </tr>
-                <tr>
-                  <td>1,012</td>
-                  <td>taciti</td>
-                  <td>sociosqu</td>
-                  <td>ad</td>
-                  <td>litora</td>
-                </tr>
-                <tr>
-                  <td>1,013</td>
-                  <td>torquent</td>
-                  <td>per</td>
-                  <td>conubia</td>
-                  <td>nostra</td>
-                </tr>
-                <tr>
-                  <td>1,014</td>
-                  <td>per</td>
-                  <td>inceptos</td>
-                  <td>himenaeos</td>
-                  <td>Curabitur</td>
-                </tr>
-                <tr>
-                  <td>1,015</td>
-                  <td>sodales</td>
-                  <td>ligula</td>
-                  <td>in</td>
-                  <td>libero</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-                  
-                </tr>
-              </table>
+              <br>
+              <div class="table-responsive">  
+                <div class="panel panel-default">
+                  <!-- Default panel contents -->
+                  <div class="panel-heading">Equipment List</div>
+                  <!-- Table -->
+                  <table class="table">
+                    <tr>
+                      <th>#</th>
+                      <th>Header 1</th>
+                      <th>Header 2</th>
+                      <th>Header 3</th>
+                      <th>Header 4</th>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>Lorem</td>
+                      <td>Ipsum</td>
+                      <td>Dolor</td>
+                      <td>Sit</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>Lorem</td>
+                      <td>Ipsum</td>
+                      <td>Dolor</td>
+                      <td>Sit</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="panel panel-default">
+                    <div class="panel-heading">Add Details</div>
+                    <div class="panel-body">
+                      <fieldset>
+                        <legend>Basic Node Information</legend>
+                        <form role="form">
+                          <label for="nodeName" class="col-sm-2 control-label">Node Name</label>
+                          <div class="col-sm-3">
+                            <input type="text" class="form-control" id="nodeName">
+                          </div><br><br>
+                          <label for="inspectedBy" class="col-sm-2 control-label">Inspected By</label>
+                          <div class="col-sm-3">
+                            <input type="text" class="form-control" id="inspectedBy">
+                          </div><br><br>
+                          <label for="typeOfCabinet" class="col-sm-2 control-label">Type of Cabinet</label>
+                          <div class="col-sm-3">
+                            <input type="text" class="form-control" id="typeOfCabinet">
+                          </div><br><br>
+                          <label for="dateAndTime" class="col-sm-2 control-label">Date & Time Assessed</label>
+                          <div class="col-sm-3">
+                            <input type="text" class="form-control" id="dateAndTime">
+                          </div>
+                        </form>
+                      </fieldset>
+                      <br><br>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <fieldset>
+                          <legend>Visual Alarms</legend>
+                          <form role="form">
+                            <label for="nodeName" class="col-sm-2 control-label">Node Name</label>
+                            <div class="col-sm-6">
+                              <input type="text" class="form-control" id="nodeName">
+                            </div><br><br><br>
+                            <label for="inspectedBy" class="col-sm-2 control-label">Inspected By</label>
+                            <div class="col-sm-6">
+                              <input type="text" class="form-control" id="inspectedBy">
+                            </div><br><br><br>
+                            <label for="typeOfCabinet" class="col-sm-2 control-label">Type of Cabinet</label>
+                            <div class="col-sm-6">
+                              <input type="text" class="form-control" id="typeOfCabinet">
+                            </div><br><br><br>
+                            <label for="dateAndTime" class="col-sm-2 control-label">Date & Time Assessed</label>
+                            <div class="col-sm-6">
+                              <input type="text" class="form-control" id="dateAndTime">
+                            </div>
+                          </form>
+                          </fieldset>
+                        </div>
+                        <div class="col-md-6">
+                          <fieldset>
+                          <legend>Environment Condition</legend>
+                          <form role="form">
+                            <label for="nodeName" class="col-sm-2 control-label">Node Name</label>
+                            <div class="col-sm-6">
+                              <input type="text" class="form-control" id="nodeName">
+                            </div><br><br><br>
+                            <label for="inspectedBy" class="col-sm-2 control-label">Inspected By</label>
+                            <div class="col-sm-6">
+                              <input type="text" class="form-control" id="inspectedBy">
+                            </div><br><br><br>
+                            <label for="typeOfCabinet" class="col-sm-2 control-label">Type of Cabinet</label>
+                            <div class="col-sm-6">
+                              <input type="text" class="form-control" id="typeOfCabinet">
+                            </div><br><br><br>
+                            <label for="dateAndTime" class="col-sm-2 control-label">Date & Time Assessed</label>
+                            <div class="col-sm-6">
+                              <input type="text" class="form-control" id="dateAndTime">
+                            </div>
+                          </form>
+                          </fieldset>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
             </div>
             <div class="tab-pane fade" id="d1">
               <h1>Dashboard 1</h1>
