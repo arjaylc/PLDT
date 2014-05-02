@@ -51,6 +51,7 @@
           </ul>
          <form class="navbar-form navbar-right">
             <input type="text" class="form-control" placeholder="Search...">
+<<<<<<< HEAD
           </form> 
         </div>
       </div>
@@ -75,6 +76,32 @@
 	<!-- tabs -->
 	
 	 <!-- Bootstrap core JavaScript
+=======
+          </form>
+        </div>
+      </div>
+    </div>
+  </header>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li class="active"><a href="#">Overview</a></li>
+            <li><a href="#">Reports</a></li>
+            <li><a href="#">Equipment</a></li>
+            <li><a href="#">Export</a></li>
+          </ul>
+          <ul class="nav nav-sidebar">
+            <li><a href="">Equipment Map</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <h1>Dashboard</h1>
+        </div>
+      </div>
+    </div>
+    <!-- Bootstrap core JavaScript
+>>>>>>> 814c6b9453e566c1ae72fee2d5058689c19ae549
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
