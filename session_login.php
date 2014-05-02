@@ -24,4 +24,3 @@
 	else $page_master->redirectUser('index.php?error=login');
 
 ?>
-blH
