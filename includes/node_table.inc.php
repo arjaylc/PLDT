@@ -22,7 +22,7 @@
                   LIMIT 0, 25";
         $queryResult = $database_master->querySelect($query);
         foreach($queryResult as $row){?>
-       <tr>
+        <tr>
           <td><?php echo $row['nodeName']?></td>
           <td><?php echo $row['node_type']?></td>
           <td><?php echo $row['cabinetNo']?></td>
