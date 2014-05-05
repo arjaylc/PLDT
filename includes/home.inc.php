@@ -154,7 +154,6 @@
                   </div>
                 </div>
               </div>
-
             </div>
             <div class="tab-pane fade" id="d1">
               <h1>Dashboard 1</h1>
@@ -164,32 +163,10 @@
             </div>
             <div class="tab-pane" id="users">
               <h1>Users Management</h1>
-			  <!-- Button trigger modal -->
-					<button class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal">
-					  Add Users
-					</button>
-
-					<!-- Modal -->
-					<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-					  <div class="modal-dialog">
-						<div class="modal-content">
-						  <div class="modal-header">
-							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-							<h2>Add User</h2>
-						  </div>
-						  <div class="modal-body">
-							<?php include 'includes/register.inc.php';?>
-						</div>
-						  <div class="modal-footer">
-							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-							<button type="button" class="btn btn-primary">Save changes</button>
-						  </div>
-						    
-						</div>
-					  </div>
-					</div>
-				<div class="table-responsive">  
-				<br>
+              <!-- Button trigger modal -->
+              <button class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal">Add Users</button>
+              <div class="table-responsive">
+                <br>
                 <div class="panel panel-default">
                   <!-- Default panel contents -->
                   <div class="panel-heading">User List</div>
@@ -201,7 +178,7 @@
                       <th>Last Name</th>
                       <th>Position</th>
                       <th>Office</th>
-					  <th>Action</th>
+                      <th>Action</th>
                     </tr>
                     <tr>
                       <td>1</td>
@@ -209,12 +186,9 @@
                       <td>Ipsum</td>
                       <td>Dolor</td>
                       <td>Sit</td>
-					  <th> <button class="btn btn-danger">
-					  Edit
-					</button> 
-					<button class="btn btn-danger">
-					  Delete
-					</button> </th>
+                      <th><button class="btn btn-danger">Edit</button>
+                        <button class="btn btn-danger">Delete</button>
+                      </th>
                     </tr>
                     <tr>
                       <td>2</td>
@@ -222,14 +196,29 @@
                       <td>Ipsum</td>
                       <td>Dolor</td>
                       <td>Sit</td>
-					  <th> <button class="btn btn-danger">
-					  Edit
-					</button>
-					 <button class="btn btn-danger">
-					  Delete
-					</button> </th>
+                      <th><button class="btn btn-danger">Edit</button>
+                        <button class="btn btn-danger">Delete</button>
+                      </th>
                     </tr>
                   </table>
+                </div>
+              </div>
+              <!-- Modal -->
+              <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                      <h2>Add User</h2>
+                    </div>
+                    <div class="modal-body">
+                      <?php include 'includes/register.inc.php';?>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
