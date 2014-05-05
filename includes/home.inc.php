@@ -74,36 +74,7 @@
             <div class="tab-pane fade in active" id="home">
               <h1>Dashboard</h1>
               <br>
-              <div class="table-responsive">  
-                <div class="panel panel-default">
-                  <!-- Default panel contents -->
-                  <div class="panel-heading">Equipment List</div>
-                  <!-- Table -->
-                  <table class="table">
-                    <tr>
-                      <th>#</th>
-                      <th>Header 1</th>
-                      <th>Header 2</th>
-                      <th>Header 3</th>
-                      <th>Header 4</th>
-                    </tr>
-                    <tr>
-                      <td>1</td>
-                      <td>Lorem</td>
-                      <td>Ipsum</td>
-                      <td>Dolor</td>
-                      <td>Sit</td>
-                    </tr>
-                    <tr>
-                      <td>2</td>
-                      <td>Lorem</td>
-                      <td>Ipsum</td>
-                      <td>Dolor</td>
-                      <td>Sit</td>
-                    </tr>
-                  </table>
-                </div>
-              </div>
+              <?php require_once ('includes/node_table.inc.php');?>
               <div class="row">
                 <div class="col-md-12">
                   <div class="panel panel-default">

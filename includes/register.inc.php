@@ -39,12 +39,13 @@
 
 					</div>
 			  </div>
+			 </div>
 			  <div class="form-group">
 						<label for="office" class="col-sm-2 control-label">Office</label>
 			  <button data-toggle="dropdown" class="btn dropdown-toggle">Office <span class="caret"></span></button>
 						<ul class="dropdown-menu">
 							<li><a href="#">Garnet</a></li>
-							<li><a href="#">Basic</a></li>
+							<li><a href="#">Pasig</a></li>
 						</ul>
 		   </div>
 	</form>
