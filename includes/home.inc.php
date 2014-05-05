@@ -107,7 +107,7 @@
               <div class="row">
                 <div class="col-md-12">
                   <div class="panel panel-default">
-                    <div class="panel-heading">Add Details</div>
+                    <div class="panel-heading">Checklist</div>
                     <div class="panel-body">
                       <fieldset>
                         <legend>Basic Node Information</legend>
