@@ -1,3 +1,19 @@
+<div class="btn-group">
+  <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-chevron-left"></span></button>
+</div>
+<div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    Action <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <li><a href="#">Action</a></li>
+    <li><a href="#">Another action</a></li>
+    <li><a href="#">Something else here</a></li>
+  </ul>
+</div>
+<div class="btn-group">
+  <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-chevron-right"></span></button>
+</div>
 <div class="table-responsive">  
   <div class="panel panel-default">
     <!-- Default panel contents -->

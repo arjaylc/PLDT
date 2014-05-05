@@ -161,7 +161,7 @@
             <div class="tab-pane fade" id="d2">
               <h1>Dashboard 2</h1>
             </div>
-            <div class="tab-pane" id="users">
+            <div class="tab-pane fade" id="users">
               <h1>Users Management</h1>
               <!-- Button trigger modal -->
               <button class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal">Add Users</button>
