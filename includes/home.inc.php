@@ -165,44 +165,7 @@
               <h1>Users Management</h1>
               <!-- Button trigger modal -->
               <button class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal">Add Users</button>
-              <div class="table-responsive">
-                <br>
-                <div class="panel panel-default">
-                  <!-- Default panel contents -->
-                  <div class="panel-heading">User List</div>
-                  <!-- Table -->
-                  <table class="table">
-                    <tr>
-                      <th>ID#</th>
-                      <th>First Name</th>
-                      <th>Last Name</th>
-                      <th>Position</th>
-                      <th>Office</th>
-                      <th>Action</th>
-                    </tr>
-                    <tr>
-                      <td>1</td>
-                      <td>Lorem</td>
-                      <td>Ipsum</td>
-                      <td>Dolor</td>
-                      <td>Sit</td>
-                      <th><button class="btn btn-danger">Edit</button>
-                        <button class="btn btn-danger">Delete</button>
-                      </th>
-                    </tr>
-                    <tr>
-                      <td>2</td>
-                      <td>Lorem</td>
-                      <td>Ipsum</td>
-                      <td>Dolor</td>
-                      <td>Sit</td>
-                      <th><button class="btn btn-danger">Edit</button>
-                        <button class="btn btn-danger">Delete</button>
-                      </th>
-                    </tr>
-                  </table>
-                </div>
-              </div>
+              <?php require_once('includes/user_table.inc.php');?>
               <!-- Modal -->
               <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog">

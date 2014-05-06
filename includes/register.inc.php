@@ -1,5 +1,5 @@
 <div id="register-overlay" class = "form">
-	<form class="form-horizontal" role="form">
+	<form class="form-horizontal" action = "check_register.php" method="POST" role="form">
 		<div class="form-group">
 			<label for="firstname" class="col-sm-2 control-label">First Name</label>
 			<div class="col-sm-10">
@@ -30,8 +30,16 @@
 				<div class="btn-group">
 					<button data-toggle="dropdown" class="btn dropdown-toggle">User Type <span class="caret"></span></button>
 					<ul class="dropdown-menu">
-						<li><a href="#">Admin</a></li>
-						<li><a href="#">Basic</a></li>
+					<?php
+				        require_once('includes/database_master.inc.php');
+				        $database_master = new DatabaseMaster();
+						$query = "SELECT user_type FROM privileges";
+						$queryResult = $database_master->querySelect($query);
+						foreach($queryResult as $row){?>
+							<li><a href="#"><?php echo $row['user_type']?></a></li>
+					<?php
+						}
+					?>
 					</ul>
 				</div>
 			</div>
@@ -42,8 +50,16 @@
 				<div class="btn-group">
 					<button data-toggle="dropdown" class="btn dropdown-toggle">Office <span class="caret"></span></button>
 					<ul class="dropdown-menu">
-						<li><a href="#">Pasig</a></li>
-						<li><a href="#">Basic</a></li>
+					<?php
+				        require_once('includes/database_master.inc.php');
+				        $database_master = new DatabaseMaster();
+						$query = "SELECT central_officeName FROM central_offices";
+						$queryResult = $database_master->querySelect($query);
+						foreach($queryResult as $row){?>
+							<li><a href="#"><?php echo $row['central_officeName']?></a></li>
+					<?php
+						}
+					?>
 					</ul>
 				</div>
 			</div>
