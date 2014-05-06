@@ -75,7 +75,85 @@
               <h1>Dashboard</h1>
               <br>
               <?php require_once ('includes/node_table.inc.php');?>
-              <?php //require_once('includes/curbside_checklist.inc.php');?>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="panel panel-default">
+                    <div class="panel-heading">Checklist</div>
+                    <div class="panel-body">
+                      <fieldset>
+                        <legend>Basic Node Information</legend>
+                        <form role="form">
+                          <label for="nodeName" class="col-sm-2 control-label">Node Name</label>
+                          <div class="col-sm-3">
+                            <input type="text" class="form-control" id="nodeName">
+                          </div><br><br>
+                          <label for="inspectedBy" class="col-sm-2 control-label">Inspected By</label>
+                          <div class="col-sm-3">
+                            <input type="text" class="form-control" id="inspectedBy">
+                          </div><br><br>
+                          <label for="typeOfCabinet" class="col-sm-2 control-label">Type of Cabinet</label>
+                          <div class="col-sm-3">
+                            <input type="text" class="form-control" id="typeOfCabinet">
+                          </div><br><br>
+                          <label for="dateAndTime" class="col-sm-2 control-label">Date & Time Assessed</label>
+                          <div class="col-sm-3">
+                            <input type="text" class="form-control" id="dateAndTime">
+                          </div>
+                        </form>
+                      </fieldset>
+                      <br><br>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <fieldset>
+                          <legend>Visual Alarms</legend>
+                          <form role="form">
+                            <label for="nodeName" class="col-sm-2 control-label">Node Name</label>
+                            <div class="col-sm-6">
+                              <input type="text" class="form-control" id="nodeName">
+                            </div><br><br><br>
+                            <label for="inspectedBy" class="col-sm-2 control-label">Inspected By</label>
+                            <div class="col-sm-6">
+                              <input type="text" class="form-control" id="inspectedBy">
+                            </div><br><br><br>
+                            <label for="typeOfCabinet" class="col-sm-2 control-label">Type of Cabinet</label>
+                            <div class="col-sm-6">
+                              <input type="text" class="form-control" id="typeOfCabinet">
+                            </div><br><br><br>
+                            <label for="dateAndTime" class="col-sm-2 control-label">Date & Time Assessed</label>
+                            <div class="col-sm-6">
+                              <input type="text" class="form-control" id="dateAndTime">
+                            </div>
+                          </form>
+                          </fieldset>
+                        </div>
+                        <div class="col-md-6">
+                          <fieldset>
+                          <legend>Environment Condition</legend>
+                          <form role="form">
+                            <label for="nodeName" class="col-sm-2 control-label">Node Name</label>
+                            <div class="col-sm-6">
+                              <input type="text" class="form-control" id="nodeName">
+                            </div><br><br><br>
+                            <label for="inspectedBy" class="col-sm-2 control-label">Inspected By</label>
+                            <div class="col-sm-6">
+                              <input type="text" class="form-control" id="inspectedBy">
+                            </div><br><br><br>
+                            <label for="typeOfCabinet" class="col-sm-2 control-label">Type of Cabinet</label>
+                            <div class="col-sm-6">
+                              <input type="text" class="form-control" id="typeOfCabinet">
+                            </div><br><br><br>
+                            <label for="dateAndTime" class="col-sm-2 control-label">Date & Time Assessed</label>
+                            <div class="col-sm-6">
+                              <input type="text" class="form-control" id="dateAndTime">
+                            </div>
+                          </form>
+                          </fieldset>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="tab-pane fade" id="d1">
               <h1>Dashboard 1</h1>
