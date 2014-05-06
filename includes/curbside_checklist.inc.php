@@ -72,6 +72,7 @@
       <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <div class="tab-content">
             <div class="tab-pane fade in active" id="home">
+			  <h1> Curbside AG/MSAN Checklist </h1>
               <br>
                 <div class="panel panel-default">
                   <!-- Default panel contents -->
