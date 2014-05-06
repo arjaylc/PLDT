@@ -27,41 +27,41 @@
 		<div class="form-group">
 			<label for="usertype" class="col-sm-2 control-label">User Type</label>
 			<div class="col-sm-10">
-				<div class="btn-group">
-					<button data-toggle="dropdown" class="btn dropdown-toggle">User Type <span class="caret"></span></button>
-					<ul class="dropdown-menu">
+				<select>
 					<?php
 				        require_once('includes/database_master.inc.php');
 				        $database_master = new DatabaseMaster();
 						$query = "SELECT user_type FROM privileges";
 						$queryResult = $database_master->querySelect($query);
 						foreach($queryResult as $row){?>
-							<li><a href="#"><?php echo $row['user_type']?></a></li>
+							<option><?php echo $row['user_type']?></option>
 					<?php
 						}
 					?>
-					</ul>
-				</div>
+				</select>
 			</div>
 		</div>
 		<div class="form-group">
 			<label for="office" class="col-sm-2 control-label">Office</label>
 			<div class="col-sm-10">
-				<div class="btn-group">
-					<button data-toggle="dropdown" class="btn dropdown-toggle">Office <span class="caret"></span></button>
-					<ul class="dropdown-menu">
+				<select>
 					<?php
 				        require_once('includes/database_master.inc.php');
 				        $database_master = new DatabaseMaster();
 						$query = "SELECT central_officeName FROM central_offices";
 						$queryResult = $database_master->querySelect($query);
 						foreach($queryResult as $row){?>
-							<li><a href="#"><?php echo $row['central_officeName']?></a></li>
+							<option><?php echo $row['central_officeName']?></option>
 					<?php
 						}
 					?>
-					</ul>
-				</div>
+				</select>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="lastname" class="col-sm-2 control-label">Position</label>
+			<div class="col-sm-10">
+				<input type="text" class="form-control" id="position" placeholder="Enter Position">
 			</div>
 		</div>
 	</form>
