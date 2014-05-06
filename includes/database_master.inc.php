@@ -50,8 +50,8 @@
 			return $string;
 		}
 		
-		public function checkEmail($email){
-			$query = "SELECT email_address FROM users WHERE email_address='$email'";
+		public function checkIDNo($idNo){
+			$query = "SELECT idNo FROM users WHERE idNo='$idNo'";
 			$result = mysqli_query($this->databaseConnection, $query);
 			if($result){
 				if(mysqli_num_rows($result)) return false;
@@ -59,8 +59,8 @@
 			}
 			else return false;
 		}
-		public function checkPassword($email, $password){
-			$query = "SELECT password FROM users WHERE password=SHA('$password') AND email_address = '$email'";
+		public function checkPassword($idNo, $password){
+			$query = "SELECT password FROM users WHERE password=SHA('$password') AND idNo = '$idNo'";
 			$result = mysqli_query($this->databaseConnection, $query);
 			if($result){
 				if(mysqli_num_rows($result)) return true;
@@ -69,8 +69,18 @@
 			else return false;
 		}
 
-		public function checkProvince($provinces){
-			$query = "SELECT province FROM provinces WHERE province='$provinces'";
+		public function checkUser_type($user_type){
+			$query = "SELECT user_type FROM privileges WHERE user_type='$user_type'";
+			$result = mysqli_query($this->databaseConnection, $query);
+			if($result){
+				if(mysqli_num_rows($result)) return true;
+				else return false;
+			}
+			else return false;
+		}
+
+		public function checkOffice($office){
+			$query = "SELECT central_officeName FROM central_offices WHERE central_officeName='$office'";
 			$result = mysqli_query($this->databaseConnection, $query);
 			if($result){
 				if(mysqli_num_rows($result)) return true;

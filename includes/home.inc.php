@@ -43,9 +43,17 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Dashboard</a></li>
+          <?php
+              require_once('includes/database_master.inc.php');
+              $database_master = new DatabaseMaster();
+
+              $query = "SELECT firstName, lastName FROM users WHERE idNo=".$_SESSION['idNo'];
+              $queryResult = $database_master->querySelect($query);
+              $firstName = $queryResult[0]['firstName'];
+              $lastName = $queryResult[0]['lastName'];
+            ?>
+            <li><a><b><?php echo $firstName.' '.$lastName?></b></a></li>
             <li><a href="#">Settings</a></li>
-            <li><a href="#">Profile</a></li>
             <li><a href="#">Help</a></li>
             <li><a href="session_logout.php">Log Out</a></li>
           </ul>
@@ -72,8 +80,11 @@
       <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <div class="tab-content">
             <div class="tab-pane fade in active" id="home">
-              <h1>Dashboard</h1>
+              <h1>Reports</h1> 
               <br>
+               <button class="btn btn-success btn-lg" data-toggle="modal" data-target="#AddNodeModal">Add Node</button>
+               <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#AddCabinetModal">Add Cabinet</button>
+              <br><br>
               <?php require_once ('includes/node_table.inc.php');?>
               <div class="row">
                 <div class="col-md-12">
@@ -154,7 +165,48 @@
                   </div>
                 </div>
               </div>
-            </div>
+
+              <!-- AddNodeModal -->
+              <div class="modal fade" id="AddNodeModal" tabindex="-1" role="dialog" aria-labelledby="AddNodeModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                      <h2>Add Node</h2>
+                    </div>
+                    <div class="modal-body">
+                      <?php include 'includes/addnode.inc.php';?>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                  </div>
+                </div>
+              </div> <!-- end AddNodeModal -->
+
+              <!-- AddCabinetModal -->
+              <div class="modal fade" id="AddCabinetModal" tabindex="-1" role="dialog" aria-labelledby="AddCabinetModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                      <h2>Add Cabinet</h2>
+                    </div>
+                    <div class="modal-body">
+                          <?php include 'includes/addcabinet.inc.php';?>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                  </div>
+                </div>
+              </div> <!-- end cabinet modal -->
+
+
+
+            </div> <!--home div -->
             <div class="tab-pane fade" id="d1">
               <h1>Dashboard 1</h1>
             </div>
@@ -165,25 +217,45 @@
               <h1>Users Management</h1>
               <!-- Button trigger modal -->
               <button class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal">Add Users</button>
-              <?php require_once('includes/user_table.inc.php');?>
-              <!-- Modal -->
-              <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                      <h2>Add User</h2>
-                    </div>
-                    <div class="modal-body">
-                      <?php include 'includes/register.inc.php';?>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
-                  </div>
+              <div class="table-responsive">
+                <br>
+                <div class="panel panel-default">
+                  <!-- Default panel contents -->
+                  <div class="panel-heading">User List</div>
+                  <!-- Table -->
+                  <table class="table">
+                    <tr>
+                      <th>ID#</th>
+                      <th>First Name</th>
+                      <th>Last Name</th>
+                      <th>Position</th>
+                      <th>Office</th>
+                      <th>Action</th>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>Lorem</td>
+                      <td>Ipsum</td>
+                      <td>Dolor</td>
+                      <td>Sit</td>
+                      <th><button class="btn btn-danger">Edit</button>
+                        <button class="btn btn-danger">Delete</button>
+                      </th>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>Lorem</td>
+                      <td>Ipsum</td>
+                      <td>Dolor</td>
+                      <td>Sit</td>
+                      <th><button class="btn btn-danger">Edit</button>
+                        <button class="btn btn-danger">Delete</button>
+                      </th>
+                    </tr>
+                  </table>
                 </div>
               </div>
+              <?php include 'includes/register.inc.php';?>
             </div>
           </div>
       </div>

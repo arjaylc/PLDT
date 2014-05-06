@@ -30,7 +30,10 @@
       </tr>
       <?php require_once('includes/database_master.inc.php');
       $database_master = new DatabaseMaster();
-      $query = "SELECT idNo, lastName, firstName, position, central_officeName FROM users LIMIT 0,25;";
+      $query = "SELECT idNo, lastName, firstName, position, central_officeName 
+                FROM users 
+                ORDER BY lastName, firstName
+                LIMIT 0,25;";
       $queryResult = $database_master->querySelect($query);
       foreach($queryResult as $row){?>
       <tr>
