@@ -1,15 +1,15 @@
 <div id="register-overlay" class = "form">
-	<form class="form-horizontal" role="form">
+	<form class="form-horizontal" role="form" action="checkAddCab.php" method="POST">
 		<div class="form-group">
-			<label for="cabinetno" class="col-sm-2 control-label">Cabinet Number</label>
+			<label for="cabinetNo" class="col-sm-2 control-label">Cabinet Number</label>
 			<div class="col-sm-10">
-				<input type="text" class="form-control" id="nodeName" placeholder="Enter Cabinet Number">
+				<input type="text" class="form-control" id="cabinetNo" name="cabinetNo" placeholder="Enter Cabinet Number">
 			</div>
 		</div>
 		<div class="form-group">
-			<label for="cabinettype" class="col-sm-2 control-label">Cabinet Type</label>
+			<label for="cabinetType" class="col-sm-2 control-label">Cabinet Type</label>
 			<div class="col-sm-10">
-				<select>
+				<select name="cabinetType">
 					<?php
 				        require_once('includes/database_master.inc.php');
 				        $database_master = new DatabaseMaster();
@@ -23,6 +23,9 @@
 				</select>
 			</div>
 		</div>
-
+					<div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      <button type="submit" class="btn btn-primary">Add Cabinet</button>
+                    </div>
 	</form>
 </div>
