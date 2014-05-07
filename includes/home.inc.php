@@ -99,7 +99,7 @@
               <?php require_once('includes/curbside_checklist.inc.php');?>
             </div>
             <div class="tab-pane fade" id="d2">
-              <h1>Dashboard 2</h1>
+            <a href="exportNodeList.php"> <button class="btn btn-success btn-lg" data-toggle="modal">Export Node List</button> </a>
             </div>
             <div class="tab-pane fade" id="users">
               <h1>Users Management</h1>
