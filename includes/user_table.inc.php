@@ -31,7 +31,8 @@
       <?php require_once('includes/database_master.inc.php');
       $database_master = new DatabaseMaster();
       $query = "SELECT idNo, lastName, firstName, position, central_officeName 
-                FROM users 
+                FROM users
+                WHERE NOT idNo=".$_SESSION['idNo']."
                 ORDER BY lastName, firstName
                 LIMIT 0,25;";
       $queryResult = $database_master->querySelect($query);
@@ -42,26 +43,8 @@
         <td><?php echo $row['firstName']?></td>
         <td><?php echo $row['position']?></td>
         <td><?php echo $row['central_officeName']?></td>
-        <th><button class="btn btn-danger">Edit</button>
-          <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteUserModal"><span class="glyphicon glyphicon-trash"></span></button>
-          <!-- Modal -->
-          <div class="modal fade" id="deleteUserModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                  <h4 class="modal-title" id="myModalLabel">Delete User</h4>
-                </div>
-                <div class="modal-body">
-                  <center>
-                    <p>Are you sure in deleting this user?</p>
-                    <button type="button" class="btn btn-danger">Yes</button>
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
-                  </center>
-                </div>
-              </div>
-            </div>
-          </div>
+        <th><button type="button" id = "deleteUserButton<?php echo $row['idNo']?>" class="btn btn-danger" data-toggle="modal" data-target="#deleteUserModal<?php echo $row['idNo']?>"><span class="glyphicon glyphicon-trash"></span></button>
+          <?php require('includes/delete_user_modal.inc.php'); ?>
         </th>
       </tr>
       <?php

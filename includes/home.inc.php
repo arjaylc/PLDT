@@ -99,12 +99,15 @@
               <?php require_once('includes/curbside_checklist.inc.php');?>
             </div>
             <div class="tab-pane fade" id="d2">
-            <a href="exportNodeList.php"> <button class="btn btn-success btn-lg" data-toggle="modal">Export Node List</button> </a>
+              <a href="exportNodeList.php"> 
+              	<button class="btn btn-success btn-lg" data-toggle="modal">Export Node List</button> 
+              </a>
             </div>
             <div class="tab-pane fade" id="users">
               <h1>Users Management</h1>
               <!-- Button trigger modal -->
               <button class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal">Add Users</button>
+              <br><br>
               <?php 
               	require_once 'includes/user_table.inc.php';
               	require_once 'includes/register.inc.php';

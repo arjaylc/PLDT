@@ -54,7 +54,6 @@
 		$query = "INSERT INTO users VALUES ('$idNo', '$user_type', SHA('$password'), '$firstName', '$lastName', 
 			'$position', '$office')";
 		if($database_master->queryUpdate($query)){
-			$session_master->logUserIn($email, $usertype, $province);
 			$page_master->redirectUser();
 		}
 		else $page_master->redirectUser('index.php?error=database');
