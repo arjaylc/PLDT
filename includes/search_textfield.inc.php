@@ -1,7 +1,7 @@
-<label for="cabinetnumber" class="col-sm-2 control-label">Cabinet Number</label>
+<label for="cabinetNo" class="col-sm-2 control-label">Cabinet Number</label>
 <div class="col-sm-10">
-	<input type="search" class="form-control" id = "cabinetNo" class = "cabinetNo" required pattern = "[a-zA-z\s-]*" 
-	title = "letters, spaces, and hyphens only" placeholder="Enter Cabinet Number" name="cabinetNo"/>
+	<input type="search" id = "cabinetNo" class="form-control" required pattern = "[a-zA-z0-9\s-]*" 
+	title = "letters, spaces, number, and hyphens only" placeholder="Enter Cabinet Number" name="cabinetNo"/>
 </div>
 
 <link rel="stylesheet" href="css/autocomplete.css" />
