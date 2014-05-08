@@ -69,10 +69,13 @@
 				<div class="col-sm-3 col-md-2 sidebar">
 					<div class="well">
 					<ul id="sidenav" class="nav nav-pills nav-stacked">
-						<li class="active"><a href="#home" data-toggle="tab"><strong>Reports</strong></a></li>
-						<li><a href="#d1" data-toggle="tab"><strong>Maintenance</strong></a></li>
-						<li><a href="#d2" data-toggle="tab"><strong>Export</strong></a></li>
-            <li><a href="#users" data-toggle="tab"><strong>Users Management</strong></a></li>
+              <li><a href="#tabs-side" data-toggle="tab"><strong>My Projects</strong><span class="badge">2</span></a></li>
+              <li><a href="#pills-basic" data-toggle="tab"><strong>PMS</strong><span class="badge">1</span></a></li>
+              <li><a href="#pills-stacked" data-toggle="tab"><strong>CMS</strong><span class="badge">2</span></a></li>
+						  <li class="active"><a href="#home" data-toggle="tab"><strong>Reports</strong></a></li>
+  						<li><a href="#d1" data-toggle="tab"><strong>Maintenance</strong></a></li>
+              <li><a href="#d2" data-toggle="tab"><strong>Export</strong></a></li>
+              <li><a href="#users" data-toggle="tab"><strong>Users Management</strong></a></li>
 					</ul>
 					</div><!-- .well -->
 				</div> <!-- col-sm -->
