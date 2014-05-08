@@ -8,7 +8,7 @@
 	$session_master = new SessionMaster();
 	$query = "DELETE FROM users WHERE idNo=".$_GET['idNo'];
 	if($database_master->queryUpdate($query)){
-		$page_master->redirectUser('index.php?user_delete=success&user='.$_GET['idNo']);
+		$page_master->redirectUser('index.php?user_delete=success');
 	} else{
 		$page_master->redirectUser('index.php?user_delete=failed');
 	}

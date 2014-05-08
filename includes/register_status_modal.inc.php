@@ -11,7 +11,7 @@
         <p>
         <?php
           if(isset($_GET['new_user'])){?>
-            You have successfully registered user '<?php echo $_GET['new_user']?>'
+            You have successfully user '<?php echo $_GET['new_user']?>'
         <?php
           } else{?>
             Unable to add a new user to the database.
