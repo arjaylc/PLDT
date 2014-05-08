@@ -45,11 +45,11 @@
 <label class="col-md-4 control-label" for="radios">a) Check SCM Alarm LED</label>
 <div class="col-md-4"> 
 <label class="radio-inline" for="radios-0">
-<input type="radio" name="radios" id="radios-0" value="WITH" checked="checked">
+<input type="radio" name="radios1" id="radios-0" value="WITH" checked="checked">
 With
 </label> 
 <label class="radio-inline" for="radios-1">
-<input type="radio" name="radios" id="radios-1" value="WITHOUT">
+<input type="radio" name="radios1" id="radios-1" value="WITHOUT">
 Without
 </label>
 </div>
@@ -60,11 +60,11 @@ Without
 <label class="col-md-4 control-label" for="radios">b) Check ICM alarm LED</label>
 <div class="col-md-4"> 
 <label class="radio-inline" for="radios-0">
-<input type="radio" name="radios" id="radios-0" value="With" checked="checked">
+<input type="radio" name="radios2" id="radios-0" value="With" checked="checked">
 With
 </label> 
 <label class="radio-inline" for="radios-1">
-<input type="radio" name="radios" id="radios-1" value="Without">
+<input type="radio" name="radios2" id="radios-1" value="Without">
 Without
 </label>
 </div>
@@ -75,11 +75,11 @@ Without
 <label class="col-md-4 control-label" for="radios">c) Check RJ45/FOC/SFP if properly connected on uplink port</label>
 <div class="col-md-4"> 
 <label class="radio-inline" for="radios-0">
-<input type="radio" name="radios" id="radios-0" value="OKAY" checked="checked">
+<input type="radio" name="radios3" id="radios-0" value="OKAY" checked="checked">
 Okay
 </label> 
 <label class="radio-inline" for="radios-1">
-<input type="radio" name="radios" id="radios-1" value="NOT OKAY">
+<input type="radio" name="radios3" id="radios-1" value="NOT OKAY">
 Not okay
 </label>
 </div>
@@ -90,11 +90,11 @@ Not okay
 <label class="col-md-4 control-label" for="radios">d) Check VPM alarm LED</label>
 <div class="col-md-4"> 
 <label class="radio-inline" for="radios-0">
-<input type="radio" name="radios" id="radios-0" value="With" checked="checked">
+<input type="radio" name="radios4" id="radios-0" value="With" checked="checked">
 With
 </label> 
 <label class="radio-inline" for="radios-1">
-<input type="radio" name="radios" id="radios-1" value="Without">
+<input type="radio" name="radios4" id="radios-1" value="Without">
 Without
 </label>
 </div>
@@ -105,11 +105,11 @@ Without
 <label class="col-md-4 control-label" for="radios">e) Check IVD alarm LED</label>
 <div class="col-md-4"> 
 <label class="radio-inline" for="radios-0">
-<input type="radio" name="radios" id="radios-0" value="With" checked="checked">
+<input type="radio" name="radios5" id="radios-0" value="With" checked="checked">
 With
 </label> 
 <label class="radio-inline" for="radios-1">
-<input type="radio" name="radios" id="radios-1" value="Without">
+<input type="radio" name="radios5" id="radios-1" value="Without">
 Without
 </label>
 </div>
@@ -120,11 +120,11 @@ Without
 <label class="col-md-4 control-label" for="radios">f) Check IVD WAN LED, should be blinking</label>
 <div class="col-md-4"> 
 <label class="radio-inline" for="radios-0">
-<input type="radio" name="radios" id="radios-0" value="Yes" checked="checked">
+<input type="radio" name="radios6" id="radios-0" value="Yes" checked="checked">
 Yes
 </label> 
 <label class="radio-inline" for="radios-1">
-<input type="radio" name="radios" id="radios-1" value="No">
+<input type="radio" name="radios6" id="radios-1" value="No">
 No
 </label>
 </div>
@@ -135,11 +135,11 @@ No
 <label class="col-md-4 control-label" for="radios">g) Check PRM alarm LED</label>
 <div class="col-md-4"> 
 <label class="radio-inline" for="radios-0">
-<input type="radio" name="radios" id="radios-0" value="With" checked="checked">
+<input type="radio" name="radios7" id="radios-0" value="With" checked="checked">
 With
 </label> 
 <label class="radio-inline" for="radios-1">
-<input type="radio" name="radios" id="radios-1" value="Without">
+<input type="radio" name="radios7" id="radios-1" value="Without">
 Without
 </label>
 </div>
@@ -162,11 +162,11 @@ Without
 <label class="col-md-4 control-label" for="radios">Node Type</label>
 <div class="col-md-4"> 
 <label class="radio-inline" for="radios-0">
-<input type="radio" name="radios" id="radios-0" value="Micro MSAN" checked="checked">
+<input type="radio" name="radios8" id="radios-0" value="Micro MSAN" checked="checked">
 Micro MSAN
 </label> 
 <label class="radio-inline" for="radios-1">
-<input type="radio" name="radios" id="radios-1" value="Mini MSAN">
+<input type="radio" name="radios8" id="radios-1" value="Mini MSAN">
 Mini MSAN
 </label>
 </div>
@@ -177,11 +177,11 @@ Mini MSAN
 <label class="col-md-4 control-label" for="radios">a) Check IPM alarm LED</label>
 <div class="col-md-4"> 
 <label class="radio-inline" for="radios-0">
-<input type="radio" name="radios" id="radios-0" value="With" checked="checked">
+<input type="radio" name="radios9" id="radios-0" value="With" checked="checked">
 With
 </label> 
 <label class="radio-inline" for="radios-1">
-<input type="radio" name="radios" id="radios-1" value="Without">
+<input type="radio" name="radios9" id="radios-1" value="Without">
 Without
 </label>
 </div>
@@ -192,11 +192,11 @@ Without
 <label class="col-md-4 control-label" for="radios">b) Check RJ45/FOC/SFP if properly connected on uplink port</label>
 <div class="col-md-4"> 
 <label class="radio-inline" for="radios-0">
-<input type="radio" name="radios" id="radios-0" value="OKAY" checked="checked">
+<input type="radio" name="radios10" id="radios-0" value="OKAY" checked="checked">
 Okay
 </label> 
 <label class="radio-inline" for="radios-1">
-<input type="radio" name="radios" id="radios-1" value="NOT OKAY">
+<input type="radio" name="radios10" id="radios-1" value="NOT OKAY">
 Not okay
 </label>
 </div>
@@ -207,11 +207,11 @@ Not okay
 <label class="col-md-4 control-label" for="radios">c) Check PVM alarm LED</label>
 <div class="col-md-4"> 
 <label class="radio-inline" for="radios-0">
-<input type="radio" name="radios" id="radios-0" value="With" checked="checked">
+<input type="radio" name="radios11" id="radios-0" value="With" checked="checked">
 With
 </label> 
 <label class="radio-inline" for="radios-1">
-<input type="radio" name="radios" id="radios-1" value="Without">
+<input type="radio" name="radios11" id="radios-1" value="Without">
 Without
 </label>
 </div>
@@ -222,11 +222,11 @@ Without
 <label class="col-md-4 control-label" for="radios">d) Check PWX alarm LED</label>
 <div class="col-md-4"> 
 <label class="radio-inline" for="radios-0">
-<input type="radio" name="radios" id="radios-0" value="With" checked="checked">
+<input type="radio" name="radios12" id="radios-0" value="With" checked="checked">
 With
 </label> 
 <label class="radio-inline" for="radios-1">
-<input type="radio" name="radios" id="radios-1" value="Without">
+<input type="radio" name="radios12" id="radios-1" value="Without">
 Without
 </label>
 </div>
@@ -255,11 +255,11 @@ Without
 <label class="col-md-4 control-label" for="radios">Missing Doors:</label>
 <div class="col-md-4"> 
 <label class="radio-inline" for="radios-0">
-<input type="radio" name="radios" id="radios-0" value="With" checked="checked">
+<input type="radio" name="radios13" id="radios-0" value="With" checked="checked">
 With
 </label> 
 <label class="radio-inline" for="radios-1">
-<input type="radio" name="radios" id="radios-1" value="Without">
+<input type="radio" name="radios13" id="radios-1" value="Without">
 Without
 </label>
 </div>
@@ -270,11 +270,11 @@ Without
 <label class="col-md-4 control-label" for="radios">Door Alignment:</label>
 <div class="col-md-4"> 
 <label class="radio-inline" for="radios-0">
-<input type="radio" name="radios" id="radios-0" value="OKAY" checked="checked">
+<input type="radio" name="radios14" id="radios-0" value="OKAY" checked="checked">
 Okay
 </label> 
 <label class="radio-inline" for="radios-1">
-<input type="radio" name="radios" id="radios-1" value="NOT OKAY">
+<input type="radio" name="radios14" id="radios-1" value="NOT OKAY">
 Not okay
 </label>
 </div>
@@ -285,11 +285,11 @@ Not okay
 <label class="col-md-4 control-label" for="radios">Check for defective door gaskets/seals:</label>
 <div class="col-md-4"> 
 <label class="radio-inline" for="radios-0">
-<input type="radio" name="radios" id="radios-0" value="With" checked="checked">
+<input type="radio" name="radios15" id="radios-0" value="With" checked="checked">
 With
 </label> 
 <label class="radio-inline" for="radios-1">
-<input type="radio" name="radios" id="radios-1" value="Without">
+<input type="radio" name="radios15" id="radios-1" value="Without">
 Without
 </label>
 </div>
@@ -300,11 +300,11 @@ Without
 <label class="col-md-4 control-label" for="radios">Check for defective/damaged locks:</label>
 <div class="col-md-4"> 
 <label class="radio-inline" for="radios-0">
-<input type="radio" name="radios" id="radios-0" value="With" checked="checked">
+<input type="radio" name="radios16" id="radios-0" value="With" checked="checked">
 With
 </label> 
 <label class="radio-inline" for="radios-1">
-<input type="radio" name="radios" id="radios-1" value="Without">
+<input type="radio" name="radios16" id="radios-1" value="Without">
 Without
 </label>
 </div>
@@ -315,11 +315,11 @@ Without
 <label class="col-md-4 control-label" for="radios">Check for traces of infestation</label>
 <div class="col-md-4"> 
 <label class="radio-inline" for="radios-0">
-<input type="radio" name="radios" id="radios-0" value="With" checked="checked">
+<input type="radio" name="radios17" id="radios-0" value="With" checked="checked">
 With
 </label> 
 <label class="radio-inline" for="radios-1">
-<input type="radio" name="radios" id="radios-1" value="Without">
+<input type="radio" name="radios17" id="radios-1" value="Without">
 Without
 </label>
 </div>
@@ -330,11 +330,11 @@ Without
 <label class="col-md-4 control-label" for="radios">Check for any means of ingress (cable ducts, door seals, etc):</label>
 <div class="col-md-4"> 
 <label class="radio-inline" for="radios-0">
-<input type="radio" name="radios" id="radios-0" value="With" checked="checked">
+<input type="radio" name="radios18" id="radios-0" value="With" checked="checked">
 With
 </label> 
 <label class="radio-inline" for="radios-1">
-<input type="radio" name="radios" id="radios-1" value="Without">
+<input type="radio" name="radios18" id="radios-1" value="Without">
 Without
 </label>
 </div>
@@ -345,11 +345,11 @@ Without
 <label class="col-md-4 control-label" for="radios">Is periodic cleaning maintained inside and outside?</label>
 <div class="col-md-4"> 
 <label class="radio-inline" for="radios-0">
-<input type="radio" name="radios" id="radios-0" value="Yes" checked="checked">
+<input type="radio" name="radios19" id="radios-0" value="Yes" checked="checked">
 Yes
 </label> 
 <label class="radio-inline" for="radios-1">
-<input type="radio" name="radios" id="radios-1" value="No">
+<input type="radio" name="radios19" id="radios-1" value="No">
 No
 </label>
 </div>
@@ -360,11 +360,11 @@ No
 <label class="col-md-4 control-label" for="radios">Encroachment with other establishments/structures:</label>
 <div class="col-md-4"> 
 <label class="radio-inline" for="radios-0">
-<input type="radio" name="radios" id="radios-0" value="With" checked="checked">
+<input type="radio" name="radios20" id="radios-0" value="With" checked="checked">
 With
 </label> 
 <label class="radio-inline" for="radios-1">
-<input type="radio" name="radios" id="radios-1" value="Without">
+<input type="radio" name="radios20" id="radios-1" value="Without">
 Without
 </label>
 </div>
@@ -375,11 +375,11 @@ Without
 <label class="col-md-4 control-label" for="radios">Condition of iron protective cage</label>
 <div class="col-md-4"> 
 <label class="radio-inline" for="radios-0">
-<input type="radio" name="radios" id="radios-0" value="Okay" checked="checked">
+<input type="radio" name="radios21" id="radios-0" value="Okay" checked="checked">
 Okay
 </label> 
 <label class="radio-inline" for="radios-1">
-<input type="radio" name="radios" id="radios-1" value="Not okay">
+<input type="radio" name="radios21" id="radios-1" value="Not okay">
 Not okay
 </label>
 </div>
