@@ -91,9 +91,6 @@
 	              require_once ('includes/addnode.inc.php');
 	              require_once ('includes/addcabinet.inc.php');
               ?>
-
-
-
             </div> <!--home div -->
             <div class="tab-pane fade" id="maintenance">
               <h1>Maintenance</h1>
@@ -141,6 +138,9 @@
         </script>
     <?php
     	}
+      if(isset($_GET['user_delete'])){
+        
+      }
     ?>
   </body>
 </html>
