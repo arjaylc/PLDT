@@ -63,7 +63,6 @@
         </div>
       </div>
     </div>
-<<<<<<< HEAD
   <!-- tabs -->
   <div class="row">
       <div id="sidebar" class="tabbable">
@@ -74,20 +73,6 @@
               <li class="active"><a href="#home" data-toggle="tab"><strong>Reports</strong></a></li>
               <li><a href="#maintenance" data-toggle="tab"><strong>Maintenance</strong></a></li>
               <li><a href="#export" data-toggle="tab"><strong>Export</strong></a></li>
-=======
-	<!-- tabs -->
-	<div class="row">
-			<div id="sidebar" class="tabbable">
-				<div class="col-sm-3 col-md-2 sidebar">
-					<div class="well">
-					<ul id="sidenav" class="nav nav-pills nav-stacked">
-              <li><a href="#tabs-side" data-toggle="tab"><strong>My Projects</strong><span class="badge">2</span></a></li>
-              <li><a href="#pills-basic" data-toggle="tab"><strong>PMS</strong><span class="badge">1</span></a></li>
-              <li><a href="#pills-stacked" data-toggle="tab"><strong>CMS</strong><span class="badge">2</span></a></li>
-						  <li class="active"><a href="#home" data-toggle="tab"><strong>Reports</strong></a></li>
-  						<li><a href="#d1" data-toggle="tab"><strong>Maintenance</strong></a></li>
-              <li><a href="#d2" data-toggle="tab"><strong>Export</strong></a></li>
->>>>>>> 8fbc03dec422aab78b2c56e6fc61be8230e1374d
               <li><a href="#users" data-toggle="tab"><strong>Users Management</strong></a></li>
           </ul>
           </div><!-- .well -->
@@ -145,7 +130,6 @@
         $('#sidenav a:first').tab('show')
       })
     </script>
-<<<<<<< HEAD
     <?php 
       if(isset($_GET['register'])){
         require_once('includes/register_status_modal.inc.php');
@@ -166,9 +150,6 @@
         </script>
     <?php
       }
-
     ?>
-=======
->>>>>>> 8fbc03dec422aab78b2c56e6fc61be8230e1374d
   </body>
 </html>

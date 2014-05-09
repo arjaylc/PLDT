@@ -32,13 +32,10 @@
 	$position = $database_master->escapeString($position);
 
 	$redirectPage = 'index.php?';
-<<<<<<< HEAD
 	if(!$database_master->checkIdNo($idNo)){
 		$errors['idNo'] = $idNo;
 		$redirectPage.='id='.$idNo;
 	}
-=======
->>>>>>> 8fbc03dec422aab78b2c56e6fc61be8230e1374d
 	if($password!=$repass){
 		$errors['password'] = "nomatch";
 		$redirectPage.='password=nomatch';
@@ -61,13 +58,9 @@
 		$query = "INSERT INTO users VALUES ('$idNo', '$user_type', SHA('$password'), '$firstName', '$lastName', 
 			'$position', '$office')";
 		if($database_master->queryUpdate($query)){
-<<<<<<< HEAD
 			$page_master->redirectUser('index.php?register=success&new_user='.$idNo);
-=======
-			$page_master->redirectUser();
->>>>>>> 8fbc03dec422aab78b2c56e6fc61be8230e1374d
 		}
-		else $page_master->redirectUser('index.php?error=database');
+		else $page_master->redirectUser('index.php?register=failed');
 	} else{
 		$page_master->redirectUser($redirectPage);
 	}
