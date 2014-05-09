@@ -69,10 +69,12 @@
 				<div class="col-sm-3 col-md-2 sidebar">
 					<div class="well">
 					<ul id="sidenav" class="nav nav-pills nav-stacked">
-              <li><a href="#notifications" data-toggle="tab"><strong>Notifications</strong><span class="badge">1</span></a></li>
+              <li><a href="#tabs-side" data-toggle="tab"><strong>My Projects</strong><span class="badge">2</span></a></li>
+              <li><a href="#pills-basic" data-toggle="tab"><strong>PMS</strong><span class="badge">1</span></a></li>
+              <li><a href="#pills-stacked" data-toggle="tab"><strong>CMS</strong><span class="badge">2</span></a></li>
 						  <li class="active"><a href="#home" data-toggle="tab"><strong>Reports</strong></a></li>
-  						<li><a href="#maintenance" data-toggle="tab"><strong>Maintenance</strong></a></li>
-              <li><a href="#export" data-toggle="tab"><strong>Export</strong></a></li>
+  						<li><a href="#d1" data-toggle="tab"><strong>Maintenance</strong></a></li>
+              <li><a href="#d2" data-toggle="tab"><strong>Export</strong></a></li>
               <li><a href="#users" data-toggle="tab"><strong>Users Management</strong></a></li>
 					</ul>
 					</div><!-- .well -->
@@ -95,11 +97,11 @@
 
 
             </div> <!--home div -->
-            <div class="tab-pane fade" id="maintenance">
+            <div class="tab-pane fade" id="d1">
               <h1>Maintenance</h1>
               <?php require_once('includes/curbside_checklist.inc.php');?>
             </div>
-            <div class="tab-pane fade" id="export">
+            <div class="tab-pane fade" id="d2">
               <a href="exportNodeList.php"> 
               	<button class="btn btn-success btn-lg" data-toggle="modal">Export Node List</button> 
               </a>
@@ -130,17 +132,5 @@
         $('#sidenav a:first').tab('show')
       })
     </script>
-    <?php 
-    	if(isset($_GET['register'])){
-        require_once('includes/register_status_modal.inc.php');
-      ?>
-        <script type = "text/javascript">
-          $(window).load(function(){
-           $('#registerSuccessModal').modal('show');
-          });
-        </script>
-    <?php
-    	}
-    ?>
   </body>
 </html>

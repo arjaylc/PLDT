@@ -32,16 +32,13 @@
 	$position = $database_master->escapeString($position);
 
 	$redirectPage = 'index.php?';
-	if($database_master->checkIdNo($idNo)){
-		$errors['idNo'] = $idNo;
-		$redirectPage.='id=$idNo';
-	}
 	if($password!=$repass){
 		$errors['password'] = "nomatch";
-		$redirectPage.='&password=nomatch';
+		$redirectPage.='password=nomatch';
 	}
+
 	if(empty($idNo)||empty($password)||empty($repass)||empty($user_type)||empty($position)){
-		$errors['empty'] = "true";
+		$errors['error'] = "empty";
 		$redirectPage.='&error=empty';
 	}
 	if(!$database_master->checkUser_type($user_type)){
@@ -57,9 +54,9 @@
 		$query = "INSERT INTO users VALUES ('$idNo', '$user_type', SHA('$password'), '$firstName', '$lastName', 
 			'$position', '$office')";
 		if($database_master->queryUpdate($query)){
-			$page_master->redirectUser('index.php?register=success&new_user=$idNo');
+			$page_master->redirectUser();
 		}
-		else $page_master->redirectUser('index.php?register=failed');
+		else $page_master->redirectUser('index.php?error=database');
 	} else{
 		$page_master->redirectUser($redirectPage);
 	}

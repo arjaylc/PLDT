@@ -1,6 +1,5 @@
 <!-- Edit Modal -->
-
-      <div class="modal fade" id="nodeDetailsModal<?php echo $row['nodeName']?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal fade" id="nodeDetailsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
@@ -9,24 +8,11 @@
             </div>
             <div class="modal-body">
               <div id="edit-overlay" class = "form">
-			  
                 <form class="form-horizontal" action = "[]]" method="POST" role="form">
-				
-				<?php 
-					require_once('includes/database_master.inc.php');
-					$database_master = new DatabaseMaster();
-					$query = "SELECT sinNo, electricMeterNo, node_type, cabinetNo, central_officeName
-							  FROM node";
-					$queryResult = $database_master->querySelect($query);
-					
-					?>
-				
-				
-				
                   <div class="form-group">
-                    <label for="editSinNo<?php echo $row['sinNo']?>" class="col-sm-3 control-label">SinNo</label>
+                    <label for="editSinNo" class="col-sm-3 control-label">SinNo</label>
                     <div class="col-sm-9">
-                      <input type="text" class="form-control" name="editSinNo" id="editSinNo<?php echo $row['sinNo']?>" disabled>
+                      <input type="text" class="form-control" name="editSinNo" id="editSinNo" disabled>
                     </div>
                   </div>
                   <div class="form-group">
@@ -59,14 +45,7 @@
                       <input type="text" class="form-control" name="editNodeLocation" id="editNodeLocation" disabled>
                     </div>
                   </div>
-				  
-				  <!--
-					
-				  --->
-				  
-				  
                 </form>
-				
               </div>
             </div>
             <div class="modal-footer">
