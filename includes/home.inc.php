@@ -63,21 +63,36 @@
         </div>
       </div>
     </div>
+<<<<<<< HEAD
+  <!-- tabs -->
+  <div class="row">
+      <div id="sidebar" class="tabbable">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <div class="well">
+          <ul id="sidenav" class="nav nav-pills nav-stacked">
+              <li><a href="#notifications" data-toggle="tab"><strong>Notifications</strong><span class="badge">1</span></a></li>
+              <li class="active"><a href="#home" data-toggle="tab"><strong>Reports</strong></a></li>
+              <li><a href="#maintenance" data-toggle="tab"><strong>Maintenance</strong></a></li>
+              <li><a href="#export" data-toggle="tab"><strong>Export</strong></a></li>
+=======
 	<!-- tabs -->
 	<div class="row">
 			<div id="sidebar" class="tabbable">
 				<div class="col-sm-3 col-md-2 sidebar">
 					<div class="well">
 					<ul id="sidenav" class="nav nav-pills nav-stacked">
-              <li><a href="#notifications" data-toggle="tab"><strong>Notifications</strong><span class="badge">1</span></a></li>
+              <li><a href="#tabs-side" data-toggle="tab"><strong>My Projects</strong><span class="badge">2</span></a></li>
+              <li><a href="#pills-basic" data-toggle="tab"><strong>PMS</strong><span class="badge">1</span></a></li>
+              <li><a href="#pills-stacked" data-toggle="tab"><strong>CMS</strong><span class="badge">2</span></a></li>
 						  <li class="active"><a href="#home" data-toggle="tab"><strong>Reports</strong></a></li>
-  						<li><a href="#maintenance" data-toggle="tab"><strong>Maintenance</strong></a></li>
-              <li><a href="#export" data-toggle="tab"><strong>Export</strong></a></li>
+  						<li><a href="#d1" data-toggle="tab"><strong>Maintenance</strong></a></li>
+              <li><a href="#d2" data-toggle="tab"><strong>Export</strong></a></li>
+>>>>>>> 8fbc03dec422aab78b2c56e6fc61be8230e1374d
               <li><a href="#users" data-toggle="tab"><strong>Users Management</strong></a></li>
-					</ul>
-					</div><!-- .well -->
-				</div> <!-- col-sm -->
-			</div> <!-- sidebar -->
+          </ul>
+          </div><!-- .well -->
+        </div> <!-- col-sm -->
+      </div> <!-- sidebar -->
       <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <div class="tab-content">
             <div class="tab-pane fade in active" id="home">
@@ -87,21 +102,21 @@
                <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#AddCabinetModal">Add Cabinet</button>
               <br><br>
               <?php
-	              require_once ('includes/node_table.inc.php');
-	              require_once ('includes/addnode.inc.php');
-	              require_once ('includes/addcabinet.inc.php');
+                require_once ('includes/node_table.inc.php');
+                require_once ('includes/addnode.inc.php');
+                require_once ('includes/addcabinet.inc.php');
               ?>
 
 
 
             </div> <!--home div -->
-            <div class="tab-pane fade" id="maintenance">
+            <div class="tab-pane fade" id="d1">
               <h1>Maintenance</h1>
               <?php require_once('includes/curbside_checklist.inc.php');?>
             </div>
-            <div class="tab-pane fade" id="export">
+            <div class="tab-pane fade" id="d2">
               <a href="exportNodeList.php"> 
-              	<button class="btn btn-success btn-lg" data-toggle="modal">Export Node List</button> 
+                <button class="btn btn-success btn-lg" data-toggle="modal">Export Node List</button> 
               </a>
             </div>
             <div class="tab-pane fade" id="users">
@@ -110,16 +125,16 @@
               <button class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal">Add Users</button>
               <br><br>
               <?php 
-              	require_once 'includes/user_table.inc.php';
-              	require_once 'includes/register.inc.php';
+                require_once 'includes/user_table.inc.php';
+                require_once 'includes/register.inc.php';
               ?>
             </div>
           </div>
       </div>
-	</div> <!-- row -->
-					
-	
-	 <!-- Bootstrap core JavaScript
+  </div> <!-- row -->
+          
+  
+   <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -130,17 +145,30 @@
         $('#sidenav a:first').tab('show')
       })
     </script>
+<<<<<<< HEAD
     <?php 
-    	if(isset($_GET['register'])){
+      if(isset($_GET['register'])){
         require_once('includes/register_status_modal.inc.php');
       ?>
         <script type = "text/javascript">
           $(window).load(function(){
-           $('#registerSuccessModal').modal('show');
+           $('#registerStatusModal').modal('show');
           });
         </script>
     <?php
-    	}
+      }
+      if(isset($_GET['user_delete'])){
+        require_once('includes/user_delete_status_modal.inc.php')
+      ?>
+        <script type = "text/javascript">
+          $(window).load(function(){
+           $('#UserDeleteStatusModal').modal('show');
+        </script>
+    <?php
+      }
+
     ?>
+=======
+>>>>>>> 8fbc03dec422aab78b2c56e6fc61be8230e1374d
   </body>
 </html>

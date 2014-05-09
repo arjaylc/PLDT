@@ -1,0 +1,35 @@
+for PEMS (PMS & CMS)
+idNo of user
+task title
+node name
+checklist
+cabinet #
+deadline (datetime)
+type of maintenance (PMS or CMS)
+fault description (random)
+action taken (random)
+datetime started
+datetime accomplished
+status (success, failed, pending)
+
+for PEMS (report from Corenet)
+idNo
+report title
+node name
+cabinet #
+type of maintenance (CMS)
+fault description (random)
+datetime reported
+status (success, failed, pending)
+
+
+for Corenet?
+
+NAS (network assurance) group - monitors the nodes
+
+hardware
+port physical connection fiber modules cards
+
+software
+configuration
+

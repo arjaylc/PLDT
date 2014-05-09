@@ -1,46 +1,16 @@
 <div class="btn-group">
   <form>
-    <?php
-      require_once('includes/database_master.inc.php');
-      if(isset($_GET['page'])){
-        $page=$_GET['page'];
-      } else{
-        $page='1';
-      }
-      if($page!='1'){
-    ?>
-
-        <button type="button" onclick= "document.location.href = 'index.php?page=<?php echo ((int)$page)-1?>'"
-        class="btn btn-default"><span class="glyphicon glyphicon-chevron-left"></span></button>
-
-    <?php
-      }
-    ?>
-      <select style="height: 35px;" onchange ="location = this.options[this.selectedIndex].value;">
-    <?php
-      $nodesPerPage=25;//nodes per page
-      $query = "SELECT COUNT(nodeName) as nodeCount FROM node";
-      $queryResult = $database_master->querySelect($query);
-      if(is_array($queryResult) && count($queryResult)){
-        $numPages = $queryResult[0]['nodeCount']/$nodesPerPage;
-        for($i=1; $i<=$numPages; $i++){
-          echo '<option value="index.php?page='.$i.'"';
-          if($i==$page){
-            echo ' selected';
-          }
-          echo '>'.$i.'</option>';
-        }
-      }
-    ?>
+  <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-chevron-left"></span></button>
+  <select style="height: 35px;">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+    <option>6</option>
+    <option>7</option>
   </select>
-  <?php
-    if((int)$page!=(int)$numPages){?>
-      <button type="button" class="btn btn-default" onclick= "document.location.href = 'index.php?page=<?php echo ((int)$page)+1?>'">
-      <span class="glyphicon glyphicon-chevron-right"></span></button>
-  <?php
-    }
-  ?>
-  
+  <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-chevron-right"></span></button>
 </form>
 </div>
 <div class="table-responsive">  
@@ -60,12 +30,16 @@
       <?php 
         require_once('includes/database_master.inc.php');
         $database_master = new DatabaseMaster();
-        $offset=$page*25;
         $query = "SELECT n.nodeName, n.node_type, c.cabinetNo, c.cabinet_type, n.central_officeName
                   FROM node AS n
                   LEFT JOIN cabinet AS c
                   ON n.cabinetNo = c.cabinetNo
+<<<<<<< HEAD
+                  ORDER BY c.cabinetNo, n.nodeName
                   LIMIT $offset, $nodesPerPage";
+=======
+                  LIMIT 0, 25";
+>>>>>>> 8fbc03dec422aab78b2c56e6fc61be8230e1374d
         $queryResult = $database_master->querySelect($query);
         foreach($queryResult as $row){?>
           <?php require('includes/node_row.inc.php');?>

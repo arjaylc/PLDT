@@ -13,7 +13,7 @@
 	$cabinetType = $database_master->escapeString($cabinetType);
 	$query = "INSERT INTO cabinet (cabinetNo, cabinet_type) VALUES ('$cabinetNo', '$cabinetType')";
 	if($database_master->queryUpdate($query)){
-		$page_master->redirectUser('index.php?cab_add=success');
-	}
-	else $page_master->redirectUser('index.php?cab_add=failed');
+			$page_master->redirectUser();
+		}
+		else $page_master->redirectUser('index.php?error=database');
 ?>
