@@ -91,15 +91,12 @@
                 require_once ('includes/addnode.inc.php');
                 require_once ('includes/addcabinet.inc.php');
               ?>
-
-
-
             </div> <!--home div -->
-            <div class="tab-pane fade" id="d1">
+            <div class="tab-pane fade" id="maintenance">
               <h1>Maintenance</h1>
               <?php require_once('includes/curbside_checklist.inc.php');?>
             </div>
-            <div class="tab-pane fade" id="d2">
+            <div class="tab-pane fade" id="export">
               <a href="exportNodeList.php"> 
                 <button class="btn btn-success btn-lg" data-toggle="modal">Export Node List</button> 
               </a>
@@ -150,6 +147,7 @@
         </script>
     <?php
       }
+
     ?>
   </body>
 </html>

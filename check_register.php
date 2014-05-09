@@ -38,11 +38,10 @@
 	}
 	if($password!=$repass){
 		$errors['password'] = "nomatch";
-		$redirectPage.='password=nomatch';
+		$redirectPage.='&password=nomatch';
 	}
-
 	if(empty($idNo)||empty($password)||empty($repass)||empty($user_type)||empty($position)){
-		$errors['error'] = "empty";
+		$errors['empty'] = "true";
 		$redirectPage.='&error=empty';
 	}
 	if(!$database_master->checkUser_type($user_type)){

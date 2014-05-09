@@ -24,7 +24,7 @@
 	$query = "INSERT INTO node (nodeName, sinNo, electricMeterNo, node_type, cabinetNo, central_officeName, nodeLocation)
 			 VALUES ('$nodeName','$sinNumber', '$ElectricMeterNo','$node_type','$cabinetNo','$office','$nodeLocation')";
 	if($database_master->queryUpdate($query)){
-			$page_master->redirectUser();
+			$page_master->redirectUser('index.php?add_node=success');
 		}
-		else $page_master->redirectUser('index.php?error=database');
+		else $page_master->redirectUser('index.php?add_node=failed');
 ?>
