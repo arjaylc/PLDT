@@ -1,15 +1,17 @@
 <div class="btn-group">
   <form>
   <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-chevron-left"></span></button>
-  <select style="height: 35px;">
-    <option>1</option>
-    <option>2</option>
-    <option>3</option>
-    <option>4</option>
-    <option>5</option>
-    <option>6</option>
-    <option>7</option>
-  </select>
+  <div class="col-xs-4">
+    <select class="form-control">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+      <option>6</option>
+      <option>7</option>
+    </select>
+  </div>
   <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-chevron-right"></span></button>
 </form>
 </div>

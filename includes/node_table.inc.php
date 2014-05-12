@@ -16,35 +16,36 @@
     <?php
       }
     ?>
-      <select style="height: 35px;" onchange ="location = this.options[this.selectedIndex].value;">
-    <?php
-      $nodesPerPage=25;//nodes per page
-      $query = "SELECT COUNT(nodeName) as nodeCount FROM node";
-      $queryResult = $database_master->querySelect($query);
-      if(is_array($queryResult) && count($queryResult)){
-        $numPages = $queryResult[0]['nodeCount']/$nodesPerPage;
-        for($i=1; $i<=$numPages; $i++){
-          echo '<option value="index.php?page='.$i.'"';
-          if($i==$page){
-            echo ' selected';
+    <div class="col-xs-4">
+      <select class="form-control" onchange ="location = this.options[this.selectedIndex].value;">
+        <?php
+        $nodesPerPage=25;//nodes per page
+        $query = "SELECT COUNT(nodeName) as nodeCount FROM node";
+        $queryResult = $database_master->querySelect($query);
+        if(is_array($queryResult) && count($queryResult)){
+          $numPages = $queryResult[0]['nodeCount']/$nodesPerPage;
+          for($i=1; $i<=$numPages; $i++){
+            echo '<option value="index.php?page='.$i.'"';
+            if($i==$page){
+              echo ' selected';
+            }
+            echo '>'.$i.'</option>';
           }
-          echo '>'.$i.'</option>';
         }
-      }
-    ?>
-  </select>
-  <?php
+        ?>
+      </select>
+    </div>
+    <?php
     if((int)$page!=(int)$numPages){?>
       <button type="button" class="btn btn-default" onclick= "document.location.href = 'index.php?page=<?php echo ((int)$page)+1?>'">
       <span class="glyphicon glyphicon-chevron-right"></span></button>
-  <?php
-    }
-  ?>
-      ><h2> Search for Cabinet/Node</h2>
-      <form class="navbar-form navbar-right">
+      <?php
+    }?>
+    <h2> Search for Cabinet/Node</h2>
+    <form class="navbar-form navbar-right">
       <input type="text" class="form-control" placeholder="Search...">
-      </form> 
-</form>
+    </form> 
+  </form>
 </div>
 <div class="table-responsive">  
   <div class="panel panel-default">

@@ -81,11 +81,12 @@
         <div class="col-sm-3 col-md-2 sidebar">
           <div class="well">
           <ul id="sidenav" class="nav nav-pills nav-stacked">
-              <li><a href="#notifications" data-toggle="tab"><strong>Notifications</strong><span class="badge">1</span></a></li>
               <li class="active"><a href="#home" data-toggle="tab"><strong>Inventory</strong></a></li>
+              <li><a href="#addProject" data-toggle="tab"><strong>Add Project</strong></a></li>
               <li><a href="#maintenance" data-toggle="tab"><strong>Maintenance</strong></a></li>
               <li><a href="#export" data-toggle="tab"><strong>Export</strong></a></li>
               <li><a href="#users" data-toggle="tab"><strong>Users Management</strong></a></li>
+              <li><a href="#notifications" data-toggle="tab"><strong>Notifications</strong><span class="badge">1</span></a></li>
           </ul>
           </div><!-- .well -->
         </div> <!-- col-sm -->
@@ -93,7 +94,7 @@
       <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <div class="tab-content">
             <div class="tab-pane fade in active" id="home">
-              <h1>Reports</h1> 
+              <h1>Inventory</h1> 
               <br>
                <button class="btn btn-success btn-lg" data-toggle="modal" data-target="#AddNodeModal">Add Node</button>
                <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#AddCabinetModal">Add Cabinet</button>
@@ -101,13 +102,16 @@
               <?php
                 require_once ('includes/node_table.inc.php');
                 require_once ('includes/addnode.inc.php');
-                require_once ('includes/addcabinet.inc.php');
-                
+                require_once ('includes/addcabinet.inc.php'); 
               ?>
             </div> <!--home div -->
             <div class="tab-pane fade" id="maintenance">
               <h1>Maintenance</h1>
               <?php require_once('includes/curbside_checklist.inc.php');?>
+            </div>
+            <div class="tab-pane fade" id="addProject">
+              <h1>Add Project</h1>
+              <?php require_once('includes/addproject.inc.php');?>
             </div>
             <div class="tab-pane fade" id="export">
               <a href="exportNodeList.php"> 
