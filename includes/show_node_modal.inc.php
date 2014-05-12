@@ -1,6 +1,6 @@
 <!-- Edit Modal -->
 
-      <div class="modal fade" id="nodeDetailsModal<?php echo $row['nodeName']?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal fade" id="nodeDetailsModal<?php echo $row['nodeName']?>" tabindex="-1" role="dialog" aria-labelledby="nodeDetailsLabel" aria-hidden="true">
          <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
@@ -52,9 +52,6 @@
             </div>
             <div class="modal-footer">
               <a data-dismiss="modal" data-toggle="modal" href="#editNodeDetailsModal<?php echo $row['nodeName']?>" ><button type="button" class="btn btn-danger"  >Edit</button></a>
-              <?php
-                require_once ('includes/edit_node_modal.inc.php');
-              ?>
               <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
             </div>
           </div>
