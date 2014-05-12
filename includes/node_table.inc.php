@@ -40,7 +40,10 @@
   <?php
     }
   ?>
-  
+      ><h2> Search for Cabinet/Node</h2>
+      <form class="navbar-form navbar-right">
+      <input type="text" class="form-control" placeholder="Search...">
+      </form> 
 </form>
 </div>
 <div class="table-responsive">  
@@ -61,7 +64,7 @@
         require_once('includes/database_master.inc.php');
         $database_master = new DatabaseMaster();
         $offset=$page*25;
-        $query = "SELECT n.nodeName, n.node_type, c.cabinetNo, c.cabinet_type, n.central_officeName
+        $query = "SELECT n.nodeName, n.node_type, c.cabinetNo, c.cabinet_type, n.central_officeName,n.sinNo,n.electricMeterNo,n.nodeLocation
                   FROM node AS n
                   LEFT JOIN cabinet AS c
                   ON n.cabinetNo = c.cabinetNo

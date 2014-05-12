@@ -26,6 +26,18 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <script>
+        function enableButton() {
+            document.getElementById("editSinNo").disabled = false;
+            document.getElementById("saveButton").disabled = false;
+            document.getElementById("editNodeLocation").disabled = false;
+            document.getElementById("editCentralOffice").disabled = false;
+            document.getElementById("editCabinetNo").disabled = false;
+            document.getElementById("editNodeType").disabled = false;
+            document.getElementById("editElectricMeterNo").disabled = false;
+        }
+    </script>
   </head>
 
   <body>
@@ -70,7 +82,7 @@
           <div class="well">
           <ul id="sidenav" class="nav nav-pills nav-stacked">
               <li><a href="#notifications" data-toggle="tab"><strong>Notifications</strong><span class="badge">1</span></a></li>
-              <li class="active"><a href="#home" data-toggle="tab"><strong>Reports</strong></a></li>
+              <li class="active"><a href="#home" data-toggle="tab"><strong>Inventory</strong></a></li>
               <li><a href="#maintenance" data-toggle="tab"><strong>Maintenance</strong></a></li>
               <li><a href="#export" data-toggle="tab"><strong>Export</strong></a></li>
               <li><a href="#users" data-toggle="tab"><strong>Users Management</strong></a></li>
@@ -90,6 +102,7 @@
                 require_once ('includes/node_table.inc.php');
                 require_once ('includes/addnode.inc.php');
                 require_once ('includes/addcabinet.inc.php');
+                
               ?>
             </div> <!--home div -->
             <div class="tab-pane fade" id="maintenance">
