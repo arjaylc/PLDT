@@ -16,8 +16,8 @@
 					</div>
 					<div class="form-group">
 						<label for="cabinetType" class="col-sm-2 control-label">Cabinet Type</label>
-						<div class="col-sm-10">
-							<select name="cabinetType">
+						<div class="col-sm-3">
+							<select class="form-control" name="cabinetType">
 								<?php
 							        require_once('includes/database_master.inc.php');
 							        $database_master = new DatabaseMaster();

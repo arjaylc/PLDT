@@ -17,8 +17,8 @@
 					</div>
 					<div class="form-group">
 						<label for="nodeType" class="col-sm-2 control-label">Node Type</label>
-						<div class="col-sm-10">
-							<select id = "nodeType" name="nodeType">
+						<div class="col-sm-6">
+							<select class="form-control" id = "nodeType" name="nodeType">
 								<?php
 							        require_once('includes/database_master.inc.php');
 							        $database_master = new DatabaseMaster();
@@ -49,8 +49,8 @@
 					</div>
 					<div class="form-group">
 						<label for="office" class="col-sm-2 control-label">Office</label>
-						<div class="col-sm-10">
-							<select id = "office" name="office">
+						<div class="col-sm-3">
+							<select class="form-control" id = "office" name="office">
 								<?php
 							        require_once('includes/database_master.inc.php');
 							        $database_master = new DatabaseMaster();
