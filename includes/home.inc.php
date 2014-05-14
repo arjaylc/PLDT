@@ -27,17 +27,7 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <script>
-        function enableButton() {
-            document.getElementById("editSinNo").disabled = false;
-            document.getElementById("saveButton").disabled = false;
-            document.getElementById("editNodeLocation").disabled = false;
-            document.getElementById("editCentralOffice").disabled = false;
-            document.getElementById("editCabinetNo").disabled = false;
-            document.getElementById("editNodeType").disabled = false;
-            document.getElementById("editElectricMeterNo").disabled = false;
-        }
-    </script>
+    
   </head>
 
   <body>
@@ -83,7 +73,6 @@
           <ul id="sidenav" class="nav nav-pills nav-stacked">
               <li class="active"><a href="#home" data-toggle="tab"><strong>Inventory</strong></a></li>
               <li><a href="#addProject" data-toggle="tab"><strong>Add Project</strong></a></li>
-              <li><a href="#maintenance" data-toggle="tab"><strong>Maintenance</strong></a></li>
               <li><a href="#export" data-toggle="tab"><strong>Export</strong></a></li>
               <li><a href="#users" data-toggle="tab"><strong>Users Management</strong></a></li>
               <li><a href="#notifications" data-toggle="tab"><strong>Notifications</strong><span class="badge">1</span></a></li>
@@ -105,10 +94,6 @@
                 require_once ('includes/addcabinet.inc.php'); 
               ?>
             </div> <!--home div -->
-            <div class="tab-pane fade" id="maintenance">
-              <h1>Maintenance</h1>
-              <?php require_once('includes/curbside_checklist.inc.php');?>
-            </div>
             <div class="tab-pane fade" id="addProject">
               <h1>Add Project</h1>
               <?php require_once('includes/addproject.inc.php');?>
@@ -126,6 +111,13 @@
               <?php 
                 require_once 'includes/user_table.inc.php';
                 require_once 'includes/register.inc.php';
+              ?>
+            </div>
+
+            <div class="tab-pane fade" id="notifications">
+              <h1>Notifications</h1>
+              <?php 
+                require_once 'includes/notifications.inc.php';
               ?>
             </div>
           </div>
@@ -166,5 +158,12 @@
       }
 
     ?>
+    
+    <link rel="stylesheet" href="css/autocomplete.css" />
+
+    <script src="js/search/jquery-1.11.0.min.js"></script>    
+    <script src="js/search/jquery-ui-1.10.4.custom.min.js"></script>
+    <script src="js/search/search-listener.js"></script>
+
   </body>
 </html>

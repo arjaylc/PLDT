@@ -23,7 +23,7 @@
         $query = "SELECT COUNT(nodeName) as nodeCount FROM node";
         $queryResult = $database_master->querySelect($query);
         if(is_array($queryResult) && count($queryResult)){
-          $numPages = $queryResult[0]['nodeCount']/$nodesPerPage;
+          $numPages = ($queryResult[0]['nodeCount']/$nodesPerPage)+1;
           for($i=1; $i<=$numPages; $i++){
             echo '<option value="index.php?page='.$i.'"';
             if($i==$page){
@@ -64,7 +64,7 @@
       <?php 
         require_once('includes/database_master.inc.php');
         $database_master = new DatabaseMaster();
-        $offset=$page*25;
+        $offset=($page-1)*25;
         $query = "SELECT n.nodeName, n.node_type, c.cabinetNo, c.cabinet_type, n.central_officeName,n.sinNo,n.electricMeterNo,n.nodeLocation
                   FROM node AS n
                   LEFT JOIN cabinet AS c

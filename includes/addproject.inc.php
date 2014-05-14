@@ -18,15 +18,15 @@
 	    				</div>
 	    			</div>
 					<div class="form-group">
-						<label for="idnumber" class="col-sm-4 control-label">ID Number</label>
+						<label for="employee" class="col-sm-4 control-label">Employee</label>
 						<div class="col-sm-7">
-							<input type="text" class="form-control" id="idnumber" placeholder="Enter ID number" name="idnumber">
+							<input type="text" class="form-control" id="employee" placeholder="Enter Employee Details" name="idnumber">
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="nodename" class="col-sm-4 control-label">Node Name</label>
+						<label for="projectNodeName" class="col-sm-4 control-label">Node Name</label>
 						<div class="col-sm-7">
-							<input type="text" class="form-control" id="nodename" placeholder="Enter Node Name" name="nodename">
+							<input type="text" class="form-control" id="projectNodeName" placeholder="Enter Node Name" name="nodename">
 						</div>
 					</div>
 
@@ -35,22 +35,22 @@
 
 					
 					<div class="form-group">
-						<label for="deadline" class="col-sm-4 control-label">Deadline</label>
+						<label for="projectDeadline" class="col-sm-4 control-label">Deadline</label>
 						<div class="col-sm-7">
-							<input type="datetime-local" class="form-control" id="deadline" placeholder="Enter Deadline Date Time" name="deadline">
+							<input type="datetime-local" class="form-control" id="projectDeadline" placeholder="Enter Deadline Date Time" name="deadline">
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="typeofmaintenance" class="col-sm-4 control-label">Type of Maintenance</label>
+						<label for="projectType" class="col-sm-4 control-label">Type of Maintenance</label>
 						<div class="col-sm-3">
-							<select id = "typeofmaintenance" name="typeofmaintenance" class="form-control"> <!-- SHALL BE EDITED -->
+							<select id = "projectType" name="typeofmaintenance" class="form-control"> <!-- SHALL BE EDITED -->
 								<?php
 							        require_once('includes/database_master.inc.php');
 							        $database_master = new DatabaseMaster();
-									$query = "SELECT central_officeName FROM central_offices";
+									$query = "SELECT project_type FROM project_types";
 									$queryResult = $database_master->querySelect($query);
 									foreach($queryResult as $row){?>
-										<option><?php echo $row['central_officeName']?></option>
+										<option><?php echo $row['project_type']?></option>
 								<?php
 									}
 								?>
@@ -58,23 +58,9 @@
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="actiontaken" class="col-sm-4 control-label">Action taken</label>
+						<label for="projectTasks" class="col-sm-4 control-label">Action taken</label>
 						<div class="col-sm-7">
-							<textarea class="form-control" rows="3" id="actiontaken" placeholder="Enter Action Taken" name="actiontaken"></textarea>
-						</div>
-					</div>
-
-					<div class="form-group">
-						<label for="datetimestarted" class="col-sm-4 control-label">Date Time Started</label>
-						<div class="col-sm-7">
-							<input type="datetime-local" class="form-control" id="datetimestarted" placeholder="Enter Date Time Started" name="datetimestarted">
-						</div>
-					</div>
-
-					<div class="form-group">
-						<label for="datetimeaccomplished" class="col-sm-4 control-label">Date Time Accomplished</label>
-						<div class="col-sm-7">
-							<input type="datetime-local" class="form-control" id="datetimeaccomplished" placeholder="Enter Date Time Accomplished" name="datetimeaccomplished">
+							<textarea class="form-control" rows="3" id="projectTasks" placeholder="Enter Tasks" name="actiontaken"></textarea>
 						</div>
 					</div>
 					<div class="modal-footer">
