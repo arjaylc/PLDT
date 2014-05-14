@@ -32,6 +32,8 @@
 
   <body>
 
+    <?php include 'includes/display_settings.inc.php' ?>
+
     <div class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -55,7 +57,7 @@
               $lastName = $queryResult[0]['lastName'];
             ?>
             <li><a><b><?php echo $firstName.' '.$lastName?></b></a></li>
-            <li><a href="#">Settings</a></li>
+            <li><a href="#" data-toggle="modal" data-target="#displaySettings">Settings</a></li>
             <li><a href="#">Help</a></li>
             <li><a href="session_logout.php">Log Out</a></li>
           </ul>
@@ -97,7 +99,7 @@
             <div class="tab-pane fade" id="addProject">
               <h1>Add Project</h1>
               <?php require_once('includes/addproject.inc.php');?>
-            </div>
+            </div> 
             <div class="tab-pane fade" id="export">
               <a href="exportNodeList.php"> 
                 <button class="btn btn-success btn-lg" data-toggle="modal">Export Node List</button> 
@@ -122,8 +124,7 @@
             </div>
           </div>
       </div>
-  </div> <!-- row -->
-          
+  </div> <!-- row -->          
   
    <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -156,7 +157,6 @@
         </script>
     <?php
       }
-
     ?>
     
     <link rel="stylesheet" href="css/autocomplete.css" />
