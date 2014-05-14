@@ -11,6 +11,7 @@ include ("includes/database_master.inc.php");
 			$query = "SELECT CONCAT(firstName, ' ', lastName, '(', idNo, ')') as employee FROM users 
 			WHERE firstName LIKE '".strtoupper($_GET['name_startsWith'])."%'
 			OR lastName LIKE'".strtoupper($_GET['name_startsWith'])."%'
+			OR CONCAT(firstName, ' ', lastName) LIKE'".strtoupper($_GET['name_startsWith'])."%'
 			OR idNo LIKE '".strtoupper($_GET['name_startsWith'])."%' LIMIT 10";
 	    	$data = $database_master->querySearch($query, 'employee'); 
 	    echo json_encode($data);
