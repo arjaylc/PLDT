@@ -105,7 +105,9 @@
             </div> <!--home div -->
             <div class="tab-pane fade" id="addProject">
               <h1>Add Project</h1>
-              <?php require_once('includes/addproject.inc.php');?>
+              <?php require_once('includes/addproject.inc.php');
+					require_once('includes/addreport.inc.php');
+			  ?>
             </div> 
             <div class="tab-pane fade" id="export">
               <a href="exportNodeList.php"> 
