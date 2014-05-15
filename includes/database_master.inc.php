@@ -8,7 +8,7 @@
 		private function connectDatabase(){
 			$host = 'localhost';
 			$user = 'root';
-			$password = 'root';
+			$password = '';
 			$db_name = 'egmm';
 			$this->databaseConnection = mysqli_connect($host, $user, $password, $db_name); 
 			mysqli_set_charset($this->databaseConnection, 'utf8');
@@ -59,6 +59,26 @@
 			}
 			else return false;
 		}
+		public function checkNodeName($nodeName){
+			$query = "SELECT nodeName FROM node WHERE nodeName='$nodeName'";
+			$result = mysqli_query($this->databaseConnection, $query);
+			if($result){
+				if(mysqli_num_rows($result)) return false;
+				else return true;
+			}
+			else return false;
+		}
+
+		public function checkCabinetNo($cabinetNo){
+			$query = "SELECT cabinetNo FROM cabinet WHERE cabinetNo='$cabinetNo'";
+			$result = mysqli_query($this->databaseConnection, $query);
+			if($result){
+				if(mysqli_num_rows($result)) return false;
+				else return true;
+			}
+			else return false;
+		}
+
 		public function checkPassword($idNo, $password){
 			$query = "SELECT password FROM users WHERE password=SHA('$password') AND idNo = '$idNo'";
 			$result = mysqli_query($this->databaseConnection, $query);

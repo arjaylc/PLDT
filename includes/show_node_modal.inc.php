@@ -16,8 +16,8 @@
                 <div class="col-sm-9">
                     <select class="form-control" name="cabinetType">
                       <?php
-                            require_once('includes/database_master.inc.php');
-                            $database_master = new DatabaseMaster();
+                        require_once('includes/database_master.inc.php');
+                        $database_master = new DatabaseMaster();
                         $query = "SELECT cabinet_types FROM cabinet_types";
                         $queryResult = $database_master->querySelect($query);
                         foreach($queryResult as $row){?>
