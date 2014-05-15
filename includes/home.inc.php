@@ -80,18 +80,19 @@
         <div class="col-sm-3 col-md-2 sidebar">
           <div class="well">
           <ul id="sidenav" class="nav nav-pills nav-stacked">
+             <li><a href="#notifications" data-toggle="tab"><strong>Notifications</strong><span class="badge">1</span></a></li>
               <li class="active"><a href="#home" data-toggle="tab"><strong>Inventory</strong></a></li>
               <li><a href="#addProject" data-toggle="tab"><strong>Add Project</strong></a></li>
               <li><a href="#export" data-toggle="tab"><strong>Export</strong></a></li>
               <li><a href="#users" data-toggle="tab"><strong>Users Management</strong></a></li>
-              <li><a href="#notifications" data-toggle="tab"><strong>Notifications</strong><span class="badge">1</span></a></li>
+             
           </ul>
           </div><!-- .well -->
         </div> <!-- col-sm -->
       </div> <!-- sidebar -->
       <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <div class="tab-content">
-            <div class="tab-pane fade in active" id="home">
+            <div class="tab-pane fade in" id="home">
               <h1>Inventory</h1> 
               <br>
                <button class="btn btn-success btn-lg" data-toggle="modal" data-target="#AddNodeModal">Add Node</button>
@@ -105,13 +106,21 @@
             </div> <!--home div -->
             <div class="tab-pane fade" id="addProject">
               <h1>Add Project</h1>
-              <?php require_once('includes/addproject.inc.php');
-					require_once('includes/addreport.inc.php');
-			  ?>
+              <?php require_once('includes/addproject.inc.php');?>
             </div> 
             <div class="tab-pane fade" id="export">
+              <h1>Select items to export:</h1>
+                  <form action="">
+                      <input type="checkbox" name="checkb1" value="nodeName"> Node Name&nbsp;
+                      <input type="checkbox" name="checkb2" value="nodeType"> Node Type&nbsp;
+                      <input type="checkbox" name="checkb3" value="cabinetNum"> Cabinet Number&nbsp;
+                      <input type="checkbox" name="checkb4" value="cabinetType"> Cabinet Type&nbsp;
+                      <input type="checkbox" name="checkb5" value="COlocated"> Located CO&nbsp;
+
+
+                  </form>
               <a href="exportNodeList.php"> 
-                <button class="btn btn-success btn-lg" data-toggle="modal">Export Node List</button> 
+                <button class="btn btn-success btn-lg" data-toggle="modal">Export List</button> 
               </a>
             </div>
             <div class="tab-pane fade" id="users">
@@ -125,7 +134,7 @@
               ?>
             </div>
 
-            <div class="tab-pane fade" id="notifications">
+            <div class="tab-pane fade active" id="notifications">
               <h1>Notifications</h1>
               <?php 
                 require_once 'includes/notifications.inc.php';
