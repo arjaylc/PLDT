@@ -50,7 +50,7 @@
 	}
 
 	if(empty($errors)){
-		$query = "INSERT INTO users VALUES ('$idNo', '$user_type', SHA('$password'), '$firstName', '$lastName', 
+		$query = "INSERT INTO projects VALUES ('$idNo', '$user_type', SHA('$password'), '$firstName', '$lastName', 
 			'$position', '$office')";
 		if($database_master->queryUpdate($query)){
 			$page_master->redirectUser('index.php?register=success&new_user='.$idNo);

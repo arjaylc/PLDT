@@ -7,16 +7,20 @@
       } else{
         $page='1';
       }
-      if($page!='1'){
-    ?>
+      ?>
 
+     <div class="col-xs-3">
         <button type="button" onclick= "document.location.href = 'index.php?page=<?php echo ((int)$page)-1?>'"
-        class="btn btn-default"><span class="glyphicon glyphicon-chevron-left"></span></button>
 
-    <?php
-      }
+        class="btn btn-default"
+      <?php 
+     if($page=='1'){
+      echo  'disabled';
+    }
     ?>
-    <div class="col-xs-6">
+    ><span class="glyphicon glyphicon-chevron-left"></span></button>
+      </div>
+    <div class="col-xs-5">
       <select class="form-control" onchange ="location = this.options[this.selectedIndex].value;">
         <?php
         $nodesPerPage=25;//nodes per page
@@ -35,12 +39,14 @@
         ?>
       </select>
     </div>
+  <div class="col-xs-3">
+ <button type="button" class="btn btn-default" onclick= "document.location.href = 'index.php?page=<?php echo ((int)$page)+1?>'"
     <?php
-    if((int)$page!=(int)$numPages){?>
-      <button type="button" class="btn btn-default" onclick= "document.location.href = 'index.php?page=<?php echo ((int)$page)+1?>'">
-      <span class="glyphicon glyphicon-chevron-right"></span></button>
-      <?php
+    if((int)$page==(int)$numPages){
+      echo 'disabled';
     }?>
+    ><span class="glyphicon glyphicon-chevron-right"></span></button>
+      </div>
   </form>
 </div>
 <div class="table-responsive">  

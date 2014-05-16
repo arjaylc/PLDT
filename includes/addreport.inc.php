@@ -1,4 +1,4 @@
-<h1> Add Report </h1>
+<h1> Reports </h1>
 <button class="btn btn-success btn-lg" data-toggle="modal" data-target="#addReportModal">Add Report</button>
 
 <!-- Add Report Modal -->

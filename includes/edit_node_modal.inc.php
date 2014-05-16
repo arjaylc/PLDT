@@ -16,9 +16,6 @@
             </div>
           </div>
           <div class="form-group">
-              <?php require_once('includes/search_textfield.inc.php');?>
-          </div>
-          <div class="form-group">
             <label for="sinNumber" class="col-sm-2 control-label">Sin Number</label>
             <div class="col-sm-10">
               <input type="text" class="form-control" id="sinNumber" placeholder="Enter Sin Number" name="sinNumber" value="<?php echo $row['sinNo']?>">
