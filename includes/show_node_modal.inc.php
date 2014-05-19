@@ -20,8 +20,8 @@
                         $database_master = new DatabaseMaster();
                         $query = "SELECT cabinet_types FROM cabinet_types";
                         $queryResult = $database_master->querySelect($query);
-                        foreach($queryResult as $row){?>
-                          <option><?php echo $row['cabinet_types']?></option>
+                        foreach($queryResult as $row2){?>
+                          <option><?php echo $row2['cabinet_types']?></option>
                       <?php
                         }
                       ?>

@@ -8,7 +8,7 @@
 		private function connectDatabase(){
 			$host = 'localhost';
 			$user = 'root';
-			$password = '';
+			$password = 'password';
 			$db_name = 'egmm';
 			$this->databaseConnection = mysqli_connect($host, $user, $password, $db_name); 
 			mysqli_set_charset($this->databaseConnection, 'utf8');
