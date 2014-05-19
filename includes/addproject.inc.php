@@ -33,27 +33,31 @@ $chrome = strpos($_SERVER["HTTP_USER_AGENT"], 'Chrome') ? true : false;
 					</div>
 
 					<div class="form-group">
-						<label for="projectFor" class="col-sm-4 control-label">Node or Cabinet</label>
-						<div class="col-sm-3">
-							<select id = "projectFor" name="projectFor" class="form-control"> <!-- SHALL BE EDITED -->
-								<option disabled selected>Select...</option>
-								<option onclick="enableNodeInput()">Node</option>
-								<option onclick="enableCabinetInput()">Cabinet</option>
-							</select>
+						<label class="col-sm-4 control-label">Node or Cabinet</label>
+						<div class="row">
+
+				            <input type="radio" name="radios2" id="nodeRadio" value="With" checked="checked"
+				            onclick="enableNodeInput()">
+				            <label for="nodeRadio">Node</label>
+				            <input type="radio" name="radios2" id="cabinetRadio" value="Without"
+				            onclick="enableCabinetInput()">
+				            <label for="cabinetRadio">Cabinet</label>
 						</div>
 					</div>
 
-					<div id="nodeNameDiv" class="form-group" style="display:none;">
+					<div id="nodeNameDiv" class="form-group">
 						<label for="projectNodeName" class="col-sm-4 control-label">Node Name</label>
 						<div class="col-sm-7">
-							<input type="text" class="form-control" id="projectNodeName" name="nodeName">
+							<input type="text" class="form-control" id="projectNodeName" name="nodeName"
+							placeholder = "Enter Node Name">
 						</div>
 					</div>
 
 					<div id="cabinetNoDiv" class="form-group" style="display:none;">
 						<label for="projectCabinetNo" class="col-sm-4 control-label">Cabinet Number</label>
 						<div class="col-sm-7">
-							<input type="text" class="form-control" id="projectCabinetNo" name="cabinetNo">
+							<input type="text" class="form-control" id="projectCabinetNo" name="cabinetNo"
+							placeholder = "Enter Cabinet Number">
 						</div>
 					</div>
 
@@ -197,15 +201,11 @@ $chrome = strpos($_SERVER["HTTP_USER_AGENT"], 'Chrome') ? true : false;
 	function enableNodeInput(){
 		nodeNameDiv.style.display="";
 		cabinetNoDiv.style.display="none";
-		document.getElementById("projectNodeName").placeholder="Enter Node Name";
-		document.getElementById("projectCabinetNo").placeholder="";
 		document.getElementById("projectCabinetNo").value="";
 	}
 	function enableCabinetInput(){
 		nodeNameDiv.style.display="none";
 		cabinetNoDiv.style.display="";
-		document.getElementById("projectNodeName").placeholder="";
-		document.getElementById("projectCabinetNo").placeholder="Enter Cabinet Number";
 		document.getElementById("projectNodeName").value="";
 	}
 	function enableTime(){
