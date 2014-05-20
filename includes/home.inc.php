@@ -26,17 +26,6 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <script>
-        function enableButton() {
-            document.getElementById("editSinNo").disabled = false;
-            document.getElementById("saveButton").disabled = false;
-            document.getElementById("editNodeLocation").disabled = false;
-            document.getElementById("editCentralOffice").disabled = false;
-            document.getElementById("editCabinetNo").disabled = false;
-            document.getElementById("editNodeType").disabled = false;
-            document.getElementById("editElectricMeterNo").disabled = false;
-        }
-    </script>
 
     
   </head>
@@ -173,6 +162,28 @@
 
    <script src="js/search/jquery-ui-1.10.4.custom.min.js"></script>
     <script src="js/search/search-listener.js"></script>
+
+    <script>
+        function enableButton() {
+            if(document.getElementById("editSinNo").disabled==true){
+              document.getElementById("editSinNo").disabled = false;
+              document.getElementById("saveButton").disabled = false;
+              document.getElementById("editNodeLocation").disabled = false;
+              document.getElementById("editCentralOffice").disabled = false;
+              document.getElementById("editCabinetNo").disabled = false;
+              document.getElementById("editNodeType").disabled = false;
+              document.getElementById("editElectricMeterNo").disabled = false;
+            } else{
+              document.getElementById("editSinNo").disabled = true;
+              document.getElementById("saveButton").disabled = true;
+              document.getElementById("editNodeLocation").disabled = true;
+              document.getElementById("editCentralOffice").disabled = true;
+              document.getElementById("editCabinetNo").disabled = true;
+              document.getElementById("editNodeType").disabled = true;
+              document.getElementById("editElectricMeterNo").disabled = true;
+            }
+        }
+    </script>
 
   </body>
 </html>

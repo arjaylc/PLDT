@@ -1,5 +1,5 @@
-<!-- Edit Modal -->
-
+<?php 
+function showNodeModal($row){?>
       <div class="modal fade" id="nodeDetailsModal<?php echo $row['nodeName']?>" tabindex="-1" role="dialog" aria-labelledby="nodeDetailsLabel" aria-hidden="true">
          <div class="modal-dialog">
           <div class="modal-content">
@@ -20,8 +20,8 @@
                         $database_master = new DatabaseMaster();
                         $query = "SELECT cabinet_types FROM cabinet_types";
                         $queryResult = $database_master->querySelect($query);
-                        foreach($queryResult as $row2){?>
-                          <option><?php echo $row2['cabinet_types']?></option>
+                        foreach($queryResult as $cabinetType){?>
+                          <option><?php echo $cabinetType['cabinet_types']?></option>
                       <?php
                         }
                       ?>
@@ -74,3 +74,6 @@
           </div>
         </div>
       </div>
+<?php 
+}
+?>

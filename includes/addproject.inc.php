@@ -18,7 +18,7 @@ $chrome = strpos($_SERVER["HTTP_USER_AGENT"], 'Chrome') ? true : false;
 	    </div>
 	    <div class="modal-body">
 	    	<div id="register-overlay" class = "form">
-	    		<form class="form-horizontal" role="form" action="check_project.php" method="POST"> <!--- -->
+	    		<form class="form-horizontal" role="form" action="check_project.php" method="get"> <!--- -->
 	    			<div class="form-group">
 	    				<label for="projectTitle" class="col-sm-4 control-label">Project Title</label>
 	    				<div class="col-sm-7">
@@ -57,7 +57,7 @@ $chrome = strpos($_SERVER["HTTP_USER_AGENT"], 'Chrome') ? true : false;
 						<label for="projectCabinetNo" class="col-sm-4 control-label">Cabinet Number</label>
 						<div class="col-sm-7">
 							<input type="text" class="form-control" id="projectCabinetNo" name="cabinetNo"
-							placeholder = "Enter Cabinet Number">
+							disabled placeholder = "Enter Cabinet Number">
 						</div>
 					</div>
 
@@ -73,6 +73,8 @@ $chrome = strpos($_SERVER["HTTP_USER_AGENT"], 'Chrome') ? true : false;
 										<input type="date" class="form-control" id="deadline" placeholder="Enter Deadline Date" name="deadline">
 									</div>
 								</div>
+							</div>
+							<div class="form-group">
 								<div class="row">
 									<label for = "deadlineTime"class="col-sm-4 control-label">Time
 									<input type="checkbox" name="deadlineTime" value="time"
@@ -201,11 +203,15 @@ $chrome = strpos($_SERVER["HTTP_USER_AGENT"], 'Chrome') ? true : false;
 	function enableNodeInput(){
 		nodeNameDiv.style.display="";
 		cabinetNoDiv.style.display="none";
+		document.getElementById("projectNodeName").disabled=false;
+		document.getElementById("projectCabinetNo").disabled=true;
 		document.getElementById("projectCabinetNo").value="";
 	}
 	function enableCabinetInput(){
 		nodeNameDiv.style.display="none";
 		cabinetNoDiv.style.display="";
+		document.getElementById("projectNodeName").disabled=true;
+		document.getElementById("projectCabinetNo").disabled=false;
 		document.getElementById("projectNodeName").value="";
 	}
 	function enableTime(){
@@ -213,6 +219,8 @@ $chrome = strpos($_SERVER["HTTP_USER_AGENT"], 'Chrome') ? true : false;
 			deadlineTime.disabled=false;
 		} else{
 			deadlineTime.disabled=true;
+			deadlineTime.value="";
+
 		}
 	}
 	function enableTimes(){
@@ -224,6 +232,9 @@ $chrome = strpos($_SERVER["HTTP_USER_AGENT"], 'Chrome') ? true : false;
 			dlTime.disabled=true;
 			dlhour.disabled=true;
 			dlmins.disabled=true;
+			dlTime.selectedIndex=0;
+			dlhour.selectedIndex=0;
+			dlmins.selectedIndex=0;
 		}
 	}
 </script>
