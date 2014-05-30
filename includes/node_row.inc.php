@@ -20,7 +20,6 @@
           <?php
             showNodeModal($row);
             showDeleteNodeModal($row);
-            //require('includes/edit_node_modal.inc.php');
           ?>
         </div>
       </td>

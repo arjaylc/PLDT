@@ -5,70 +5,60 @@ function showNodeModal($row){?>
           <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-              <h4 class="modal-title" id="myModalLabel"><?php echo $row['nodeName']?> Details  <button type="button" class="btn btn-danger">Maintenance </button>
+              <h4 class="modal-title" id="myModalLabel">Node Details  <button type="button" class="btn btn-danger">Maintenance </button>
                 <button type="button" class="btn btn-danger">Map</button></h4>
             </div>
             <div class="modal-body">
               <div id="edit-overlay" class = "form">
                 <form class="form-horizontal" role="form" action="updateNode.php" method="POST">
                 <div class="form-group">
-                <label for="cabinetType" class="col-sm-3 control-label">Cabinet Type</label>
-                <div class="col-sm-9">
-                    <select class="form-control" name="cabinetType">
-                      <?php
-                        require_once('includes/database_master.inc.php');
-                        $database_master = new DatabaseMaster();
-                        $query = "SELECT cabinet_types FROM cabinet_types";
-                        $queryResult = $database_master->querySelect($query);
-                        foreach($queryResult as $cabinetType){?>
-                          <option><?php echo $cabinetType['cabinet_types']?></option>
-                      <?php
-                        }
-                      ?>
-                    </select>
-                  </div>
-                  <div class="form-group">
-                    <label for="editSinNo" class="col-sm-3 control-label">SinNo</label>
+                    <label for="editNodeName<?php echo $row['nodeName']?>" class="col-sm-3 control-label">Node Name</label>
                     <div class="col-sm-9">
-                      <input type="text" class="form-control" name="sinNumber" id="editSinNo" value="<?php echo $row['sinNo']?>" disabled >
+                      <input type="text" class="form-control" name="nodeName" id="editNodeName<?php echo $row['nodeName']?>" value="<?php echo $row['nodeName']?>" disabled >
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="editElectricMeterNo" class="col-sm-3 control-label">Electric Meter Number</label>
+                    <label for="editSinNo<?php echo $row['nodeName']?>" class="col-sm-3 control-label">SinNo</label>
                     <div class="col-sm-9">
-                      <input type="text" class="form-control" name="ElectricMeterNo" id="editElectricMeterNo" value="<?php echo $row['electricMeterNo']?>"  disabled>
+                      <input type="text" class="form-control" name="sinNumber" id="editSinNo<?php echo $row['nodeName']?>" value="<?php echo $row['sinNo']?>" disabled >
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="editNodeType" class="col-sm-3 control-label">Node Type</label>
+                    <label for="editElectricMeterNo<?php echo $row['nodeName']?>" class="col-sm-3 control-label">Electric Meter Number</label>
                     <div class="col-sm-9">
-                      <input type="text" class="form-control" name="nodeType" id="editNodeType" disabled>
+                      <input type="text" class="form-control" name="ElectricMeterNo" id="editElectricMeterNo<?php echo $row['nodeName']?>" value="<?php echo $row['electricMeterNo']?>"  disabled>
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="editCabinetNo" class="col-sm-3 control-label">Cabinet Number</label>
+                    <label for="editNodeType<?php echo $row['nodeName']?>" class="col-sm-3 control-label">Node Type</label>
                     <div class="col-sm-9">
-                      <input type="text" class="form-control" name="cabinetNo" id="editCabinetNo" value="<?php echo $row['cabinetNo']?>" disabled>
+                      <input type="text" class="form-control" name="nodeType" id="editNodeType<?php echo $row['nodeName']?>" value = "<?php echo $row['node_type']?>" disabled>
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="editCentralOffice" class="col-sm-3 control-label">Central Office</label>
+                    <label for="editCabinetNo<?php echo $row['nodeName']?>" class="col-sm-3 control-label">Cabinet Number</label>
                     <div class="col-sm-9">
-                      <input type="text" class="form-control" name="office" id="editCentralOffice" disabled>
+                      <input type="text" class="form-control" name="cabinetNo" id="editCabinetNo<?php echo $row['nodeName']?>" value="<?php echo $row['cabinetNo']?>" disabled>
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="editNodeLocation" class="col-sm-3 control-label">Node Location</label>
+                    <label for="editCentralOffice<?php echo $row['nodeName']?>" class="col-sm-3 control-label">Central Office</label>
                     <div class="col-sm-9">
-                      <input type="text" class="form-control" name="nodeLocation" id="editNodeLocation" value="<?php echo $row['nodeLocation']?>" disabled>
+                      <input type="text" class="form-control" name="office" id="editCentralOffice<?php echo $row['nodeName']?>" value="<?php echo $row['central_officeName']?>" disabled>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="editNodeLocation<?php echo $row['nodeName']?>" class="col-sm-3 control-label">Node Location</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" name="nodeLocation" id="editNodeLocation<?php echo $row['nodeName']?>" value="<?php echo $row['nodeLocation']?>" disabled>
                     </div>
                   </div>
                 </form>
               </div>
             </div>
             <div class="modal-footer">
-            <button type="submit" class="btn btn-danger" disabled id="saveButton" >Save</button>
-             <button type="button" onclick="enableButton()"class="btn btn-danger"  >Edit</button>
+            <button type="submit" class="btn btn-danger" disabled id="saveButton<?php echo $row['nodeName']?>" >Save</button>
+             <button type="button" onclick="enableButton('<?php echo $row["nodeName"]?>')"class="btn btn-danger"  >Edit</button>
               <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
             </div>
           </div>

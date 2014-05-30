@@ -164,23 +164,25 @@
     <script src="js/search/search-listener.js"></script>
 
     <script>
-        function enableButton() {
-            if(document.getElementById("editSinNo").disabled==true){
-              document.getElementById("editSinNo").disabled = false;
-              document.getElementById("saveButton").disabled = false;
-              document.getElementById("editNodeLocation").disabled = false;
-              document.getElementById("editCentralOffice").disabled = false;
-              document.getElementById("editCabinetNo").disabled = false;
-              document.getElementById("editNodeType").disabled = false;
-              document.getElementById("editElectricMeterNo").disabled = false;
+        function enableButton(nodeName) {
+            if(document.getElementById("editNodeName"+nodeName).disabled==true){
+              document.getElementById("editNodeName"+nodeName).disabled = false;
+              document.getElementById("editSinNo"+nodeName).disabled = false;
+              document.getElementById("saveButton"+nodeName).disabled = false;
+              document.getElementById("editNodeLocation"+nodeName).disabled = false;
+              document.getElementById("editCentralOffice"+nodeName).disabled = false;
+              document.getElementById("editCabinetNo"+nodeName).disabled = false;
+              document.getElementById("editNodeType"+nodeName).disabled = false;
+              document.getElementById("editElectricMeterNo"+nodeName).disabled = false;
             } else{
-              document.getElementById("editSinNo").disabled = true;
-              document.getElementById("saveButton").disabled = true;
-              document.getElementById("editNodeLocation").disabled = true;
-              document.getElementById("editCentralOffice").disabled = true;
-              document.getElementById("editCabinetNo").disabled = true;
-              document.getElementById("editNodeType").disabled = true;
-              document.getElementById("editElectricMeterNo").disabled = true;
+              document.getElementById("editNodeName"+nodeName).disabled = true;
+              document.getElementById("editSinNo"+nodeName).disabled = true;
+              document.getElementById("saveButton"+nodeName).disabled = true;
+              document.getElementById("editNodeLocation"+nodeName).disabled = true;
+              document.getElementById("editCentralOffice"+nodeName).disabled = true;
+              document.getElementById("editCabinetNo"+nodeName).disabled = true;
+              document.getElementById("editNodeType"+nodeName).disabled = true;
+              document.getElementById("editElectricMeterNo"+nodeName).disabled = true;
             }
         }
     </script>
