@@ -114,12 +114,7 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr>
-					<td>one </td>
-					<td> two </td>
-					<td> three </td>
-					<td> <button class="btn btn-danger" data-toggle="modal" data-target="#reportsModal">Details</button> </td>
-				</tr>
+				<?php require('includes/reports_table.inc.php') ?>
 			</tbody>
 		</table>
 	</div> <!-- panel-->
