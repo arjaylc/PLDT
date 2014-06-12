@@ -18,7 +18,7 @@ $chrome = strpos($_SERVER["HTTP_USER_AGENT"], 'Chrome') ? true : false;
 	    </div>
 	    <div class="modal-body">
 	    	<div id="register-overlay" class = "form">
-	    		<form class="form-horizontal" role="form" action="check_project.php" method="get"> <!--- -->
+	    		<form class="form-horizontal" role="form" action="check_project.php" method="POST"> <!--- -->
 	    			<div class="form-group">
 	    				<label for="projectTitle" class="col-sm-4 control-label">Project Title</label>
 	    				<div class="col-sm-7">
@@ -70,15 +70,14 @@ $chrome = strpos($_SERVER["HTTP_USER_AGENT"], 'Chrome') ? true : false;
 								<div class="row">
 									<label for="deadline" class="col-sm-4 control-label">Deadline</label>
 									<div class="col-sm-7">
-										<input type="date" class="form-control" id="deadline" placeholder="Enter Deadline Date" name="deadline">
+										<input type="date" class="form-control" id="deadline" placeholder="Enter Deadline Date" name="deadlineDate">
 									</div>
 								</div>
 							</div>
 							<div class="form-group">
 								<div class="row">
 									<label for = "deadlineTime"class="col-sm-4 control-label">Time
-									<input type="checkbox" name="deadlineTime" value="time"
-									onchange = "enableTime()"></label>
+									<input type="checkbox" name="dlCheck" onchange = "enableTime()"></label>
 									<div class="col-sm-7">
 										<input type="time" class="form-control" id="deadlineTime" placeholder="Enter Deadline Time" name="deadlineTime" disabled>
 									</div>
@@ -91,58 +90,85 @@ $chrome = strpos($_SERVER["HTTP_USER_AGENT"], 'Chrome') ? true : false;
 								<label for="deadline" class="col-sm-4 control-label">Deadline</label>
 								<div class="row">
 									<div class="col-sm-2">
-										<select class="form-control" id="dlMonth">
+										<select class="form-control" id="dlMonth" name = "dlMonth">
 											<option>mm</option>
 											<?php
 												for($i=1; $i<=12; $i++){
 											?>
-											<option><?php echo $i ?></option>
+											<option>
+												<?php 
+													if($i<10){
+														$i='0'.$i;
+													}
+													echo $i;
+												?>
+											</option>
 											<?php } ?>
 										</select>
 									</div>
 									<div class="col-sm-2">
-										<select class="form-control" id="dlDay">
+										<select class="form-control" id="dlDay" name = "dlDay">
 											<option>dd</option>
 											<?php
 												for($i=1; $i<=31; $i++){
 											?>
-											<option><?php echo $i ?></option>
+											<option>
+												<?php 
+													if($i<10){
+														$i='0'.$i;
+													}
+													echo $i;
+												?>
+											</option>
 											<?php } ?>
 										</select>
 									</div>
 									<div class="col-sm-2">
-										<input type="text" class="form-control" id="dlYear" placeholder="yyyy" maxlength="4">
+										<input type="text" class="form-control" id="dlYear" placeholder="yyyy" maxlength="4"
+										name = "dlYear">
 									</div>
 								</div>
 							</div>	
 							<div class="form-group">
 								<label class="col-sm-4 control-label">Time
-								<input type="checkbox" name="deadlineTime" value="time"
-								onchange = "enableTimes()"></label>
+								<input type="checkbox" name="dlCheck"onchange = "enableTimes()"></label>
 								
 								<div class="row">
 									<div class="col-sm-2">
-										<select class="form-control" id="dlhour" disabled>
-											<option>hh</option>
+										<select class="form-control" id="dlhour" name = "dlHour" disabled>
 											<?php
-												for($i=1; $i<=12; $i++){
+												for($i=1; $i<=11; $i++){
 											?>
-											<option><?php echo $i ?></option>
+											<option>
+												<?php 
+													if($i<10){
+														$i='0'.$i;
+													}
+													echo $i;
+												?>
+											</option>
 											<?php } ?>
+											<option selected> 12 </option>
 										</select>
 									</div>
 									<div class="col-sm-2">
-										<select class="form-control" id="dlmins" disabled>
-											<option>mm</option>
+										<select class="form-control" id="dlmins" name = "dlMins" disabled>
 											<?php
 												for($i=00; $i<=59; $i++){
 											?>
-											<option><?php echo $i ?></option>
+											<option>
+												<?php 
+													if($i<10){
+														$i='0'.$i;
+													}
+													echo $i;
+												?>
+											</option>
 											<?php } ?>
 										</select>
 									</div>
 									<div class="col-sm-2">
-										<select class="form-control" id="dlTime" disabled>
+										<select class="form-control" id="dlTime" name = "dlTime" disabled>
 											<option>AM</option>
 											<option>PM</option>
 										</select>
@@ -233,7 +259,7 @@ $chrome = strpos($_SERVER["HTTP_USER_AGENT"], 'Chrome') ? true : false;
 			dlhour.disabled=true;
 			dlmins.disabled=true;
 			dlTime.selectedIndex=0;
-			dlhour.selectedIndex=0;
+			dlhour.selectedIndex=11;
 			dlmins.selectedIndex=0;
 		}
 	}
