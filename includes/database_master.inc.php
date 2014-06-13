@@ -8,7 +8,7 @@
 		private function connectDatabase(){
 			$host = 'localhost';
 			$user = 'root';
-			$password = '';
+			$password = 'root';
 			$db_name = 'egmm';
 			$this->databaseConnection = mysqli_connect($host, $user, $password, $db_name); 
 			mysqli_set_charset($this->databaseConnection, 'utf8');
@@ -30,6 +30,12 @@
 				else return $resultData;
 			}
 			else return false;
+		}
+		public function queryCount($query){
+			$result = mysqli_query($this->databaseConnection, $query);
+			$rowCount = mysqli_num_rows($result);
+			
+			return $rowCount;
 		}
 		public function querySearch($query, $rowName){
 			$result = mysqli_query($this->databaseConnection, $query);

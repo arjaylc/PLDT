@@ -73,7 +73,7 @@
               <li><a href="#addProject" data-toggle="tab"><strong>Projects</strong></a></li>
               <li><a href="#export" data-toggle="tab"><strong>Export</strong></a></li>
               <li><a href="#users" data-toggle="tab"><strong>Users Management</strong></a></li>
-              <li><a href="#notifications" data-toggle="tab"><strong>Notifications</strong><span class="badge">1</span></a></li>
+              <li><a href="#notifications" data-toggle="tab"><strong>Notifications</strong><?php include 'notif_number.inc.php' ?></a></li>
           </ul>
           </div><!-- .well -->
         </div> <!-- col-sm -->

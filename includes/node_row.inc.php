@@ -11,7 +11,6 @@
       <td><?php echo $row['central_officeName']?></td>
       <td>
         <div class="btn-grp">
-          <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#editNodeDetailsModal<?php echo $row['nodeName']?>">Maintenance</button>
           <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#nodeDetailsModal<?php echo 
           $row['nodeName']?>">
             <span class="glyphicon glyphicon-list-alt"></span>
