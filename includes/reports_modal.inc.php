@@ -8,28 +8,38 @@
       </div>
       <div class="modal-body">
         <div class="form-group">
-          <label class="col-sm-3 control-label">Report Title</label>
+          <label>Report Title</label>
             <input type="text" value="<?php echo $row['reportTitle']?>" class="form-control" id="reportedTo" disabled>
         </div>
         <div class="form-group">
-          <label class="col-sm-3 control-label">Reported To</label>
+          <label>Reported By</label>
             <input type="text" value="<?php echo $row['firstname'].' '.$row['lastname']?>" class="form-control" id="reportedTo" disabled>
         </div>
         <div class="form-group">
-          <label class="col-sm-3 control-label">Node Name</label>
+          <label>Node Name</label>
             <input type="text" value="<?php echo $row['nodeName']?>" class="form-control" id="nodeName" disabled>
         </div>
         <div class="form-group">
-          <label class="col-sm-3 control-label">Cabinet Number</label>
+          <label>Cabinet Number</label>
             <input type="text" value="<?php echo $row['cabinetNo']?>" class="form-control" id="cabinetNo" disabled>
         </div>
         <div class="form-group">
-          <label class="col-sm-3 control-label">Fault Description</label>
+          <label>Fault Description</label>
             <textarea class="form-control" id="faultDescription" disabled><?php echo $row['faultDescription']?></textarea>
         </div>
         <div class="form-group">
-          <label class="col-sm-3 control-label">Status</label>
+          <label>Status</label>
             <input type="text" value="<?php echo $row['status']?>" class="form-control" id="cabinetNo" disabled>
+            <div class="radio">
+              <label class="radio-inline">
+                <input type="radio" name="optionsRadios" id="optionsRadios1" value="pending" checked disabled>Pending
+              </label>
+            </div>
+            <div class="radio">
+              <label class="radio-inline">
+                <input type="radio" name="optionsRadios" id="optionsRadios2" value="okay" checked disabled>Done
+              </label>
+            </div>
         </div>
       </div>
       <div class="modal-footer">
