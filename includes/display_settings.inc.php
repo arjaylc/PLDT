@@ -7,25 +7,36 @@
         <h4 class="modal-title" id="myModalLabel">User Settings</h4>
       </div>
       <div class="modal-body">
+	  <?php
+              require_once('includes/database_master.inc.php');
+              $database_master = new DatabaseMaster();
+
+              $query = "SELECT firstName, lastName, user_type FROM users WHERE idNo=".$_SESSION['idNo'];
+              $queryResult = $database_master->querySelect($query);
+              $firstName = $queryResult[0]['firstName'];
+              $lastName = $queryResult[0]['lastName'];
+			  $userType = $queryResult[0]['user_type'];
+      ?>
         <form class="form-horizontal" role="form">
           <div class="form-group">
             <label for="firstname" class="col-sm-3 control-label">First Name</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" id="firstname" disabled>
+			 <input type="text" class="form-control" id="first" value="<?php echo $firstName; ?>" />
+			  
             </div>
           </div>
 
           <div class="form-group">
             <label for="lastname" class="col-sm-3 control-label">Last Name</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" id="lastname" disabled>
+              <input type="text" class="form-control" id="lastname" value="<?php echo $lastName; ?>" />
             </div>
           </div>
 
           <div class="form-group">
             <label for="lastname" class="col-sm-3 control-label">Type</label>
             <div class="col-sm-3 end">
-              <select class="form-control" disabled></select>
+              <input type="text" class="form-control" id="userType" value="<?php echo $userType; ?>" />
             </div>
           </div>
         </form>
